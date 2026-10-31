@@ -8,24 +8,36 @@
 <title>VESPER — Private Night Resort</title>
 <style>
 @font-face{font-family:'Paganini';src:url('./fonts/paganini-regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:block;unicode-range:U+0041-005A,U+0061-007A}
-@font-face{font-family:'SUIT';src:url('./fonts/SUIT-Medium.otf') format('opentype');font-style:normal;font-weight:500;font-display:block}
+@font-face{font-family:'SUIT';src:url('./fonts/SUIT-Medium.otf') format('opentype');font-style:normal;font-weight:400;font-display:block}
+body.lang-ko, body.lang-ko [data-i18n], body.lang-ko .floor-group, body.lang-ko .facility-modal-detail, body.lang-ko .room-detail-intro p, body.lang-ko .footer-credit .credit-ko{font-family:'SUIT',sans-serif;font-weight:400}
 :root{--burgundy:#6c1d31;--wine:#351019;--deep:#11080b;--ivory:#f4efe7;--paper:#eee7dd;--gold:#b89a63;--muted:#c9beb2;--line:rgba(255,255,255,.2)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:var(--deep);color:var(--ivory);font-family:'SUIT',sans-serif;-webkit-font-smoothing:antialiased}body.menu-open{overflow:hidden}.site{overflow:hidden}img{max-width:100%;display:block}a{color:inherit}.nav{position:fixed;z-index:100;top:0;left:0;right:0;height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;color:#fff;transition:background .35s,backdrop-filter .35s}.nav.scrolled{background:rgba(17,8,11,.88);backdrop-filter:blur(16px)}.nav-brand{width:108px;display:block}.nav-brand img{width:100%;filter:brightness(0) invert(1)}.nav-links{display:flex;gap:32px;font:400 12px 'Paganini',Georgia,serif;letter-spacing:.12em;text-transform:uppercase}.nav-links a{text-decoration:none}.nav-menu{display:none;background:transparent;border:0;color:#fff;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.16em;padding:12px 0;cursor:pointer}.menu-panel{position:fixed;inset:0;background:var(--burgundy);z-index:90;display:flex;flex-direction:column;justify-content:space-between;padding:105px 7vw 42px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility .3s}.menu-panel.open{opacity:1;visibility:visible;transform:none}.menu-close{position:absolute;right:6vw;top:23px;background:transparent;border:0;color:#fff;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.16em;cursor:pointer}.mobile-links{display:flex;flex-direction:column;gap:19px}.mobile-links a{font:400 clamp(40px,12vw,64px)/1 'Paganini',Georgia,serif;text-decoration:none;letter-spacing:.01em}.mobile-menu-footer{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.16em;color:#e5d8ca}
-.hero{min-height:100svh;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 30%,#7a293d,#4b1524 32%,#210c14 60%,#10080a 84%);isolation:isolate}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.43),transparent 45%,rgba(0,0,0,.5)),radial-gradient(circle at 50% 100%,transparent 25%,rgba(0,0,0,.62));z-index:-1}.hero:after{content:"";position:absolute;width:70vw;height:70vw;border:1px solid rgba(239,221,203,.13);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-43%);z-index:-1}.hero-content{text-align:center;padding:110px 22px 70px}.eyebrow{font:400 11px 'Paganini',Georgia,serif;letter-spacing:.3em;color:#dec38b;margin-bottom:28px}.hero-logo{width:min(61vw,430px);margin:auto;filter:brightness(0) invert(1)}.tag{font:400 13px 'Paganini',Georgia,serif;letter-spacing:.27em;margin-top:23px}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:50px;margin-top:50px;padding:0 28px;border:1px solid rgba(216,187,143,.75);text-decoration:none;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.2em}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:var(--deep);color:var(--ivory);font-family:'SUIT',sans-serif;-webkit-font-smoothing:antialiased}body.menu-open{overflow:hidden}.site{overflow:hidden}img{max-width:100%;display:block}a{color:inherit}.nav{position:fixed;z-index:100;top:14px;left:50%;transform:translateX(-50%);width:min(1440px,calc(100% - 7vw));min-height:64px;padding:9px 25px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#fff;background:rgba(24,10,15,.76);border:1px solid rgba(216,187,143,.34);border-radius:999px;box-shadow:0 12px 38px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%);transition:background .35s,border-color .35s,box-shadow .35s,top .35s}.nav.scrolled{top:10px;background:rgba(17,8,11,.94);border-color:rgba(184,154,99,.48);box-shadow:0 14px 42px rgba(0,0,0,.34)}.nav-brand{width:94px;flex:0 0 auto;display:block}.nav-brand img{width:100%;filter:brightness(0) invert(1)}.nav-links{display:flex;align-items:center;justify-content:center;gap:clamp(12px,1.65vw,25px);font:400 10px 'Paganini',Georgia,serif;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}.nav-links a{text-decoration:none;opacity:.88;transition:opacity .2s,color .2s}.nav-links a:hover{opacity:1;color:#e0c18a}.nav-social{color:#e0c18a!important}.language-toggle{border:1px solid rgba(216,187,143,.72);border-radius:999px;background:rgba(24,10,15,.18);color:#fff;padding:10px 15px;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.14em;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.language-toggle:hover{background:var(--gold);border-color:var(--gold);color:#211015}.mobile-language-toggle{display:none}
+.nav-menu{display:none;background:transparent;border:0;color:#fff;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.16em;padding:12px 0;cursor:pointer}.menu-panel{position:fixed;inset:0;background:var(--burgundy);z-index:90;display:flex;flex-direction:column;justify-content:space-between;padding:105px 7vw 42px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility .3s}.menu-panel.open{opacity:1;visibility:visible;transform:none}.menu-close{position:absolute;right:6vw;top:23px;background:transparent;border:0;color:#fff;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.16em;cursor:pointer}.mobile-links{display:flex;flex-direction:column;gap:19px}.mobile-links a{font:400 clamp(40px,12vw,64px)/1 'Paganini',Georgia,serif;text-decoration:none;letter-spacing:.01em}.mobile-menu-footer{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.16em;color:#e5d8ca}
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;background:#14090d url('./images/hotel_exterior.png') center 48%/cover no-repeat;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,6,9,.48) 0%,rgba(17,7,11,.22) 34%,rgba(12,5,8,.56) 100%),linear-gradient(90deg,rgba(0,0,0,.28),transparent 48%,rgba(0,0,0,.24));z-index:-1}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 25%,rgba(10,4,7,.35) 100%);z-index:-1;pointer-events:none}
+.hero-logo{filter:drop-shadow(0 5px 22px rgba(0,0,0,.55))}.hero-content{text-align:center;padding:110px 22px 70px}.eyebrow{font:400 11px 'Paganini',Georgia,serif;letter-spacing:.3em;color:#dec38b;margin-bottom:28px}.hero-logo{width:min(61vw,430px);margin:auto;filter:brightness(0) invert(1)}.tag{font:400 13px 'Paganini',Georgia,serif;letter-spacing:.27em;margin-top:23px}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:50px;margin-top:50px;padding:0 28px;border:1px solid rgba(216,187,143,.75);text-decoration:none;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.2em}
 section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:grid;grid-template-columns:1fr 1.45fr;gap:10vw;align-items:center}.kicker{font:400 11px 'Paganini',Georgia,serif;letter-spacing:.25em;color:var(--burgundy)}h2{font:400 clamp(42px,5vw,72px)/1.04 'Paganini',Georgia,serif;margin:20px 0}.intro p{font-size:17px;line-height:2;max-width:650px;margin:0}.hotel-image{background:#160a0e;color:#fff;display:grid;grid-template-columns:1.25fr .75fr;padding:0}.media{position:relative;overflow:hidden}.media img{width:100%;height:100%;object-fit:cover}.hotel-image .media{min-height:650px}.hotel-copy{padding:80px 8vw;display:flex;flex-direction:column;justify-content:center}.hotel-copy p{font-size:15px;line-height:1.9;color:var(--muted);margin:0}.hotel-copy .kicker{color:var(--gold)}.house-title{color:var(--gold)!important}.image-caption{margin-top:20px;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.14em;color:var(--gold)}
 .night{background:var(--wine);text-align:center}.night h2{color:#f5eee7}.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:900px;margin:68px auto 0;border-top:1px solid var(--line)}.stat{padding:34px 15px;border-right:1px solid var(--line)}.stat:last-child{border:0}.num{font:400 clamp(35px,4vw,48px) 'Paganini',Georgia,serif;color:var(--gold)}.label{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.17em;margin-top:12px;color:var(--muted)}
 .facilities{background:#170b0f}.facility-head{display:flex;justify-content:space-between;gap:40px;align-items:end}.facility-head p{max-width:440px;color:var(--muted);font-size:14px;line-height:1.9;margin:0}.facility-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:60px}.facility{position:relative;aspect-ratio:4/5;overflow:hidden;background:#241014}.facility img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.65,.2,1)}.facility:hover img{transform:scale(1.04)}.facility:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82));pointer-events:none}.facility-info{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;color:#fff}.facility-no{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.2em;color:#ddc48e}.facility h3{font:400 28px 'Paganini',Georgia,serif;margin:7px 0 0}.facility p{font-size:11px;line-height:1.6;margin:8px 0 0;color:#e4dbd2}
-.rooms{background:var(--paper);color:#241517}.room-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:55px}.room{min-height:500px;position:relative;overflow:hidden;background:#251416}.room img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.room:hover img{transform:scale(1.035)}.room:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.78));pointer-events:none}.room-info{position:absolute;z-index:2;left:28px;right:28px;bottom:26px;color:#fff}.room span{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.2em;color:#e7d7bd}.room h3{font:400 29px 'Paganini',Georgia,serif;margin:8px 0 0}.room-link{display:inline-block;background:none;color:inherit;cursor:pointer;margin-top:17px;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.16em;text-decoration:none;border-bottom:1px solid #fff;padding-bottom:5px}
+.rooms{background:var(--paper);color:#241517}.room-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:55px}.room{min-height:500px;position:relative;overflow:hidden;background:#251416}.room img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.room:hover img{transform:scale(1.035)}.room:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.78));pointer-events:none}.room-info{position:absolute;z-index:2;left:28px;right:28px;bottom:26px;color:#fff}.room span{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.2em;color:#e7d7bd}.room h3{font:400 29px 'Paganini',Georgia,serif;margin:8px 0 0}.room-link{display:inline-flex;align-items:center;gap:16px;background:rgba(18,8,12,.24);color:#f5eee7;cursor:pointer;margin-top:19px;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.17em;text-decoration:none;border:1px solid rgba(216,187,143,.82);border-radius:999px;padding:12px 17px;backdrop-filter:blur(8px);transition:background .25s,color .25s,border-color .25s,transform .25s}
+.room-link:after{content:'↗';font-size:13px;color:var(--gold);transition:color .25s}
+.room-link:hover{background:var(--gold);border-color:var(--gold);color:#211015;transform:translateY(-2px)}
+.room-link:hover:after{color:#211015}
 .reserve{background:#14090d;display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:center}.reserve p{font-size:15px;line-height:1.9;color:var(--muted);max-width:530px}.reserve-box{border:1px solid rgba(184,154,99,.4);padding:40px}.reserve-box small{font:400 10px 'Paganini',Georgia,serif;letter-spacing:.2em;color:var(--gold)}.reserve-box strong{display:block;font:400 28px 'Paganini',Georgia,serif;margin:14px 0 22px}.reserve-box a{display:inline-flex;border:1px solid #a88a63;padding:14px 23px;text-decoration:none;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.18em}footer{padding:55px 9vw;background:#0c0708;color:#a99d91;display:flex;justify-content:space-between;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.18em}.reveal{opacity:0;transform:translateY(24px);transition:.8s ease}.reveal.visible{opacity:1;transform:none}
 
 /* The Archive — brand and design portfolio */
-.archive{background:#211015;color:var(--ivory)}.archive-head{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-bottom:78px}.archive-head h2{margin-bottom:0}.archive-head>p{max-width:520px;margin:0;color:var(--muted);font-size:14px;line-height:2}.archive-group{margin-top:64px}.archive-group-title{display:flex;align-items:flex-start;gap:22px;border-top:1px solid rgba(184,154,99,.38);padding-top:20px;margin-bottom:25px}.archive-group-title>span{font:400 12px 'Paganini',Georgia,serif;color:var(--gold);letter-spacing:.12em;padding-top:6px}.archive-group-title h3{font:400 29px 'Paganini',Georgia,serif;margin:0}.archive-group-title p{font-size:12px;color:#bcaeaa;margin:8px 0 0;letter-spacing:.03em}.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.archive-single{grid-template-columns:minmax(0,1fr)}.archive-single .archive-item{max-width:760px}.archive-item{position:relative;overflow:hidden;cursor:zoom-in;background:var(--ivory);color:#251519}.archive-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;transition:transform .7s ease}.archive-item:hover img{transform:scale(1.025)}.archive-item:focus-visible{outline:1px solid var(--gold);outline-offset:4px}.archive-caption{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 21px;background:#f4efe7}.archive-caption span{font:400 9px 'Paganini',Georgia,serif;letter-spacing:.14em;color:#806c57}.archive-caption strong{font:400 18px 'Paganini',Georgia,serif;font-weight:400;text-align:right}.archive-foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;margin-top:78px;color:#b6a69e;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.18em}
+.archive{background:#211015;color:var(--ivory)}.archive-head{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-bottom:78px}.archive-head h2{margin-bottom:0}.archive-head>p{max-width:520px;margin:0;color:var(--muted);font-size:14px;line-height:2}.archive-groups-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+.archive-group{margin-top:0;min-width:0}.archive-group-title{display:flex;align-items:flex-start;gap:22px;border-top:1px solid rgba(184,154,99,.38);padding-top:20px;margin-bottom:25px}.archive-group-title>span{font:400 12px 'Paganini',Georgia,serif;color:var(--gold);letter-spacing:.12em;padding-top:6px}.archive-group-title h3{font:400 29px 'Paganini',Georgia,serif;margin:0}.archive-group-title p{font-size:12px;color:#bcaeaa;margin:8px 0 0;letter-spacing:.03em}.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.archive-single{grid-template-columns:minmax(0,1fr)}.archive-single .archive-item{max-width:760px}.archive-item{position:relative;overflow:hidden;cursor:zoom-in;background:var(--ivory);color:#251519}.archive-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;transition:transform .7s ease}.archive-item:hover img{transform:scale(1.025)}.archive-item:focus-visible{outline:1px solid var(--gold);outline-offset:4px}.archive-caption{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 21px;background:#f4efe7}.archive-caption span{font:400 9px 'Paganini',Georgia,serif;letter-spacing:.14em;color:#806c57}.archive-caption strong{font:400 18px 'Paganini',Georgia,serif;font-weight:400;text-align:right}.archive-foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;margin-top:78px;color:#b6a69e;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.18em}
 
-@media(max-width:700px){html{scroll-padding-top:68px}.nav{height:68px;padding:0 6vw}.nav-brand{width:91px}.nav-links{display:none}.nav-menu{display:block}.hero-content{padding:90px 20px 65px}.hero-logo{width:min(78vw,330px)}.eyebrow{font-size:9px;letter-spacing:.22em}.tag{font-size:10px;letter-spacing:.17em}.cta{margin-top:42px;min-height:48px;font-size:10px}.hero:after{width:118vw;height:118vw}.intro{display:block;padding-bottom:88px}.intro h2{font-size:49px}.intro p{font-size:14px;line-height:1.95}.hotel-image{display:flex;flex-direction:column;padding:0}.hotel-image .media{min-height:420px}.hotel-copy{padding:60px 7vw}.hotel-copy h2{font-size:48px}.night{padding:94px 7vw}.night h2{font-size:43px}.stats{grid-template-columns:1fr;margin-top:48px}.stat{padding:25px 10px;border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.facilities{padding:88px 7vw}.facility-head{display:block}.facility-head p{margin-top:22px;font-size:13px}.facility-grid{grid-template-columns:1fr;gap:12px;margin-top:38px}.facility{aspect-ratio:4/5}.facility-info{left:22px;right:22px;bottom:20px}.facility h3{font-size:27px}.facility p{font-size:11px}.rooms{padding:88px 7vw}.rooms h2{font-size:48px}.room-grid{grid-template-columns:1fr;gap:12px;margin-top:40px}.room{min-height:390px}.room-info{left:23px;right:23px;bottom:22px}.room h3{font-size:27px}.archive{padding:88px 7vw}.archive-head{display:block;margin-bottom:54px}.archive-head h2{font-size:48px}.archive-head>p{margin-top:22px;font-size:13px}.archive-group{margin-top:48px}.archive-group-title{gap:15px}.archive-group-title h3{font-size:25px}.archive-grid{grid-template-columns:1fr;gap:14px}.archive-single .archive-item{max-width:none}.archive-caption{min-height:64px;padding:15px}.archive-caption strong{font-size:16px}.archive-foot{margin-top:55px;font-size:8px}.reserve{grid-template-columns:1fr;gap:42px}.reserve h2{font-size:48px}.reserve p{font-size:14px}.reserve-box{padding:28px}footer{display:block;padding:45px 7vw;line-height:2.5}footer div+div{margin-top:8px}}
+@media(max-width:700px){html{scroll-padding-top:82px}.nav{top:9px;width:calc(100% - 20px);min-height:58px;padding:7px 18px;border-radius:999px;gap:12px}.nav.scrolled{top:7px}.nav-brand{width:82px}.nav-links{display:none}.nav>.language-toggle{display:none}.mobile-language-toggle{display:inline-flex;margin-top:16px}.nav-menu{display:block}.hero-content{padding:90px 20px 65px}.hero-logo{width:min(78vw,330px)}.eyebrow{font-size:9px;letter-spacing:.22em}.tag{font-size:10px;letter-spacing:.17em}.cta{margin-top:42px;min-height:48px;font-size:10px}.hero:after{width:118vw;height:118vw}.intro{display:block;padding-bottom:88px}.intro h2{font-size:49px}.intro p{font-size:14px;line-height:1.95}.hotel-image{display:flex;flex-direction:column;padding:0}.hotel-image .media{min-height:420px}.hotel-copy{padding:60px 7vw}.hotel-copy h2{font-size:48px}.night{padding:94px 7vw}.night h2{font-size:43px}.stats{grid-template-columns:1fr;margin-top:48px}.stat{padding:25px 10px;border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.facilities{padding:88px 7vw}.facility-head{display:block}.facility-head p{margin-top:22px;font-size:13px}.facility-grid{grid-template-columns:1fr;gap:12px;margin-top:38px}.facility{aspect-ratio:4/5}.facility-info{left:22px;right:22px;bottom:20px}.facility h3{font-size:27px}.facility p{font-size:11px}.rooms{padding:88px 7vw}.rooms h2{font-size:48px}.room-grid{grid-template-columns:1fr;gap:12px;margin-top:40px}.room{min-height:390px}.room-info{left:23px;right:23px;bottom:22px}.room h3{font-size:27px}.archive{padding:88px 7vw}.archive-head{display:block;margin-bottom:54px}.archive-head h2{font-size:48px}.archive-head>p{margin-top:22px;font-size:13px}.archive-groups-grid{grid-template-columns:1fr;gap:48px}.archive-group{margin-top:0}.archive-group-title{gap:15px}.archive-group-title h3{font-size:25px}.archive-grid{grid-template-columns:1fr;gap:14px}.archive-single .archive-item{max-width:none}.archive-caption{min-height:64px;padding:15px}.archive-caption strong{font-size:16px}.archive-foot{margin-top:55px;font-size:8px}.reserve{grid-template-columns:1fr;gap:42px}.reserve h2{font-size:48px}.reserve p{font-size:14px}.reserve-box{padding:28px}footer{display:block;padding:45px 7vw;line-height:2.5}footer div+div{margin-top:8px}}
 
 /* Facility image lightbox */
 .facility{cursor:zoom-in}
 .facility:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.facility:before{content:'DISCOVER ↗';position:absolute;z-index:3;top:20px;right:20px;padding:10px 14px;border:1px solid rgba(220,194,145,.82);border-radius:999px;background:rgba(20,9,13,.48);backdrop-filter:blur(8px);color:#f1dfbd;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.16em;opacity:.94;transition:background .25s,color .25s,transform .25s}
+.facility:hover:before{background:var(--gold);color:#211015;transform:translateY(-2px)}
 .room-detail-modal{position:fixed;inset:0;z-index:10000;background:#0c0708;color:#f3eee5;overflow-y:auto;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility .3s ease}
 .room-detail-modal.open{opacity:1;visibility:visible;pointer-events:auto}
 .room-detail-top{position:sticky;top:0;z-index:4;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(12,7,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,154,99,.18)}
@@ -63,40 +75,462 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
 
 
 .site-footer{display:grid;grid-template-columns:1fr 1.25fr 1fr;align-items:start;gap:30px;padding:55px 9vw;background:#0c0708;color:#a99d91;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.12em;line-height:2.1}
+.lang-en .credit-ko{display:none}.lang-ko .credit-en{display:none}
 .site-footer .footer-brand{color:#d9c9b8;letter-spacing:.16em}.site-footer .footer-brand span{color:var(--gold)}
-.footer-credit p{margin:0 0 12px;font-family:'SUIT',sans-serif;font-size:12px;letter-spacing:.02em;line-height:1.9;color:#b9aaa1}.footer-credit strong{color:#e9ded2;font-weight:500}.footer-credit .credit-en{font:400 9px 'Paganini',Georgia,serif;letter-spacing:.1em;line-height:2;color:#8f817c}
+.footer-credit p{margin:0 0 12px;font-family:'SUIT',sans-serif;font-size:12px;letter-spacing:.02em;line-height:1.9;color:#b9aaa1}.footer-credit strong{color:#e9ded2;font-weight:400}.footer-credit .credit-en{font:400 9px 'Paganini',Georgia,serif;letter-spacing:.1em;line-height:2;color:#8f817c}
 .footer-portfolio{display:inline-block;margin-top:7px;padding:8px 12px;border:1px solid rgba(184,154,99,.55);color:var(--gold);text-decoration:none;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.15em}.footer-note{justify-self:end;text-align:right;color:#776a67;font-size:8px;letter-spacing:.12em}
 @media(max-width:700px){.site-footer{display:block;padding:42px 7vw;line-height:2.4}.footer-credit{margin-top:22px}.footer-note{margin-top:25px;text-align:left}.footer-credit p{font-size:11px}.footer-credit .credit-en{font-size:8px}}
 
+
+/* Floating navigation refinements */
+.nav-social{font-size:9px;letter-spacing:.12em}
+.nav-social:hover{color:#f4dfb7!important}
+.mobile-instagram{display:inline-block;margin-top:15px;color:var(--gold);text-decoration:none;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.18em}
+.identity-carousel .amenities-slide img{height:clamp(280px,42vw,520px)}
+@media(max-width:700px){.identity-carousel .amenities-slide img{height:clamp(250px,72vw,420px)}}
+@media(max-width:980px) and (min-width:701px){.nav{width:calc(100% - 36px);padding-left:18px;padding-right:18px;gap:12px}.nav-brand{width:78px}.nav-links{gap:11px;font-size:9px}.language-toggle{padding:9px 11px;font-size:9px}}
+
+
+
+/* Refined room selection, discover cues and cinematic closing page */
+.nav{top:18px;width:min(1500px,calc(100% - 8vw));min-height:60px;padding:8px 24px}
+.nav.scrolled{top:12px}
+.facility{cursor:pointer}
+.facility-discover{position:absolute;z-index:3;right:22px;top:22px;display:flex;align-items:center;gap:10px;color:#f2e7d5;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.18em;opacity:.92}
+.facility-discover b{width:34px;height:34px;border:1px solid rgba(216,187,143,.9);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:400 16px 'Paganini',Georgia,serif;transition:background .3s,color .3s,transform .3s}
+.facility:hover .facility-discover b{background:var(--gold);color:#1a0b10;transform:rotate(45deg)}
+.facility:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.room-grid{grid-template-columns:1.22fr .78fr;align-items:start;gap:22px}
+.room-suite{min-height:560px}
+.room-deluxe{min-height:440px;margin-top:78px}
+.room-link{min-height:42px;padding:0 19px;gap:22px;border-color:rgba(222,194,142,.75);background:rgba(13,7,9,.44);letter-spacing:.2em}
+.room-link i{font-style:normal;color:var(--gold);font-size:14px;transition:transform .25s}
+.room-link:hover i{color:#211015;transform:translate(2px,-2px)}
+.closing{position:relative;min-height:650px;padding:0 7vw 0;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;background:#17090e;overflow:hidden}
+.closing-image{position:absolute;inset:0;background:url('./images/hotel_exterior.png') center 52%/cover no-repeat;z-index:-2;transform:scale(1.015)}
+.closing-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(28,5,13,.94) 0%,rgba(35,7,17,.78) 43%,rgba(20,5,10,.38) 100%),linear-gradient(0deg,rgba(17,5,9,.96) 0%,transparent 48%,rgba(17,5,9,.28) 100%)}
+.closing-content{width:min(760px,75vw);padding:100px 0 90px;margin-right:auto}
+.closing .kicker{color:var(--gold)}
+.closing h2{font-size:clamp(68px,10vw,148px);line-height:.82;letter-spacing:-.045em;margin:28px 0 34px;color:#f4eee5}
+.closing h2 em{font-style:normal;color:#c19a5d;margin-left:7vw}
+.closing-content p{max-width:420px;color:#d5c9c0;font-size:13px;line-height:2;margin:0}
+.closing-actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.closing-actions a{min-width:154px;display:inline-flex;justify-content:space-between;align-items:center;gap:24px;padding:14px 17px;border:1px solid rgba(184,154,99,.68);border-radius:3px;text-decoration:none;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.16em;color:#f2e8da;transition:background .25s,color .25s,border-color .25s}
+.closing-actions a span{color:var(--gold);font-size:14px}
+.closing-actions a:hover{background:var(--gold);border-color:var(--gold);color:#1b0b10}
+.closing-actions a:hover span{color:#1b0b10}
+.site-footer{position:relative;width:100%;padding:26px 0 30px;margin-top:auto;border-top:1px solid rgba(222,194,142,.3);display:grid;grid-template-columns:1fr auto 1.2fr;align-items:end;gap:30px;background:transparent;color:#d5c9c0}
+.footer-brand{font:400 19px 'Paganini',Georgia,serif;letter-spacing:.06em;color:#f4eee5}
+.footer-brand small{display:block;margin-top:7px;font:400 8px 'Paganini',Georgia,serif;letter-spacing:.17em;color:#b89a63}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font:400 8px 'Paganini',Georgia,serif;letter-spacing:.15em;text-decoration:none;color:#e4d6c7}
+.footer-credit{text-align:right;font:400 8px 'Paganini',Georgia,serif;letter-spacing:.1em;line-height:1.8;color:#b9aaa0}
+.footer-credit p{margin:0 0 5px}
+.footer-credit strong{color:#eee5da;font-weight:400}
+@media(max-width:700px){
+ .nav{top:9px;width:calc(100% - 20px);min-height:58px;padding:7px 18px}
+ .room-grid{grid-template-columns:1fr;gap:18px}
+ .room-suite,.room-deluxe{min-height:420px;margin-top:0}
+ .room-deluxe{width:88%;margin-left:auto}
+ .facility-discover{right:14px;top:14px;font-size:8px;gap:7px}
+ .facility-discover b{width:30px;height:30px}
+ .closing{min-height:620px;padding:0 7vw}
+ .closing-content{width:100%;padding:95px 0 64px}
+ .closing h2{font-size:clamp(66px,17vw,100px)}
+ .closing-content p{font-size:12px}
+ .site-footer{grid-template-columns:1fr 1fr;gap:20px;padding:22px 0 25px}
+ .footer-links{grid-column:1/-1;grid-row:2}
+ .footer-credit{grid-column:2;grid-row:1;text-align:right}
+ .footer-credit p{font-size:7px}
+}
+
+
+.room-detail-modal.suite-view .room-detail-content{width:min(1400px,94vw)}
+.room-detail-modal.deluxe-view .room-detail-content{width:min(1080px,84vw)}
+.room-detail-modal.suite-view .room-detail-gallery{gap:24px}
+.room-detail-modal.deluxe-view .room-detail-gallery{max-width:1000px;margin:0 auto}
+@media(max-width:700px){.room-detail-modal.suite-view .room-detail-content,.room-detail-modal.deluxe-view .room-detail-content{width:90vw}}
+
+
+/* VESPER refinement · wider canvas, reservation, archive and interaction details */
+section{padding-left:6vw;padding-right:6vw}
+.nav{width:min(1600px,calc(100% - 5vw));background:rgba(24,10,15,.58);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%)}
+.nav.scrolled{background:rgba(17,8,11,.72)}
+.archive .archive-head .kicker{color:var(--gold)!important}
+.archive .amenities-slide img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#f4efe7}
+.archive .amenities-carousel{width:100%;max-width:none}
+.facility:before{content:none!important}
+.facility-discover{top:auto;right:22px;bottom:22px;display:flex;align-items:center;gap:10px;padding:8px 9px 8px 14px;border:1px solid rgba(216,187,143,.5);border-radius:999px;background:rgba(18,8,12,.38);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.facility-discover b{width:34px;height:34px}
+.closing{padding-left:6vw;padding-right:6vw}
+.closing .kicker{color:var(--gold)!important}
+.closing h2{font-size:clamp(64px,8vw,124px)}
+.closing-content p{max-width:560px}
+.vesper-marquee{width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;background:#6c1d31;border-top:1px solid rgba(184,154,99,.35);border-bottom:1px solid rgba(184,154,99,.35);padding:17px 0;color:#d5b77e}
+.vesper-marquee-track{display:flex;width:max-content;animation:vesper-marquee-scroll 34s linear infinite}
+.vesper-marquee-track span{flex:0 0 auto;padding-right:28px;white-space:nowrap;font:400 11px 'Paganini',Georgia,serif;letter-spacing:.22em}
+.vesper-marquee-track b{font-size:12px;font-weight:400;padding:0 15px;color:#ead6ae}
+@keyframes vesper-marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(min-width:1500px){section{padding-left:7vw;padding-right:7vw}.facility-grid{gap:18px}.room-grid{gap:28px}}
+@media(max-width:700px){
+ section{padding-left:7vw;padding-right:7vw}
+ .nav{width:calc(100% - 20px)}
+ .archive .amenities-slide img{aspect-ratio:4/3;height:auto}
+ .facility-discover{right:14px;bottom:14px;top:auto}
+ .vesper-marquee{padding:14px 0}
+ .vesper-marquee-track span{font-size:9px;letter-spacing:.17em}
+}
+
+
+/* VESPER refinement: room hierarchy, aligned controls and seamless marquee */
+.rooms-intro{max-width:760px;margin:18px 0 0;color:#6e5b54;font-size:14px;line-height:1.9;letter-spacing:-.015em}
+.room-info{left:34px;right:34px;bottom:30px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.room-copy{min-width:0}
+.room-copy h3{margin-bottom:0}
+.room-link{flex:0 0 auto;min-height:42px;margin:0 0 2px;padding:0 20px;border:1px solid rgba(231,211,177,.88);border-radius:999px;background:rgba(18,8,12,.18);color:#f5eee7;font:400 9px 'Paganini',Georgia,serif;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.room-link:after{content:'↗';font-size:13px;color:var(--gold);margin-left:12px;transition:transform .25s}
+.room-link:hover:after{transform:translate(2px,-2px)}
+.room-link:hover{background:var(--gold);border-color:var(--gold);color:#211015}
+.room-detail-content{width:min(1180px,88vw);margin:0 auto;padding:72px 0 100px}
+.room-detail-intro{justify-content:flex-start;align-items:flex-start;gap:48px}
+.room-detail-intro h2{flex:0 0 42%;max-width:42%}
+.room-detail-intro p{max-width:510px;margin:4px 0 0;font-family:'SUIT',sans-serif;font-size:14px;line-height:2.05;letter-spacing:-.02em;color:#d8cbc0}
+.facility-discover{background:transparent!important;border:0!important;border-radius:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:0!important;box-shadow:none!important}
+.facility-discover b{width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;border:0!important;border-radius:0!important;background:transparent!important;padding:0!important;color:inherit!important;font-size:13px!important;line-height:1!important;transform:none!important} 
+.facility:hover .facility-discover b{background:transparent!important;color:var(--gold)!important;transform:translate(2px,-2px)!important}
+.vesper-marquee{background:#c4a36b!important;color:#351019!important;border-top:1px solid rgba(53,16,25,.3)!important;border-bottom:1px solid rgba(53,16,25,.3)!important;padding:18px 0!important}
+.vesper-marquee-track{width:max-content;will-change:transform;animation:vesper-marquee-scroll 48s linear infinite}
+.vesper-marquee-track span{color:#351019!important;padding-right:0!important;font-size:11px;letter-spacing:.2em;line-height:1.5}
+.vesper-marquee-track b{color:#351019!important;font-size:12px;padding:0 18px}
+@media(max-width:700px){
+ .rooms-intro{font-size:12px;line-height:1.85;margin-top:14px}
+ .room-info{left:18px;right:18px;bottom:18px;gap:10px}
+ .room-copy h3{font-size:23px}
+ .room-link{min-height:36px;padding:0 12px;font-size:8px;letter-spacing:.1em}
+ .room-link:after{margin-left:7px}
+ .room-detail-intro{display:block}
+ .room-detail-intro h2{max-width:none;margin-bottom:16px}
+ .room-detail-intro p{font-size:12px;line-height:1.9}
+ .vesper-marquee{padding:14px 0!important}
+ .vesper-marquee-track span{font-size:9px;letter-spacing:.15em}
+}
+
+
+/* Facility information interactions */
+.facility-meta{position:absolute;z-index:4;left:22px;top:22px;right:22px;padding:15px 17px;border:1px solid rgba(216,187,143,.55);background:rgba(17,8,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#f4efe7;opacity:0;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease;pointer-events:none}
+.facility:hover .facility-meta,.facility:focus-visible .facility-meta{opacity:1;transform:none}
+.facility-meta small{display:block;color:var(--gold);font:400 9px 'Paganini',Georgia,serif;letter-spacing:.18em;margin-bottom:8px}
+.facility-meta strong{display:block;font:400 15px 'Paganini',Georgia,serif;letter-spacing:.04em;margin-bottom:5px}
+.facility-meta span{display:block;color:#e1d5ca;font-size:10px;line-height:1.7}
+.facility-schedule{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:42px 0 0;border-top:1px solid rgba(184,154,99,.34);border-bottom:1px solid rgba(184,154,99,.34)}
+.facility-schedule-item{padding:19px 14px;border-right:1px solid rgba(184,154,99,.22)}.facility-schedule-item:last-child{border-right:0}
+.facility-schedule-item small{display:block;color:var(--gold);font:400 8px 'Paganini',Georgia,serif;letter-spacing:.14em;margin-bottom:9px}
+.facility-schedule-item strong{display:block;color:#f4efe7;font:400 14px 'Paganini',Georgia,serif;white-space:nowrap}
+.facility-schedule-item span{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.floor-guide{margin-top:50px;border-top:1px solid rgba(184,154,99,.3)}.floor-guide h3{font:400 24px 'Paganini',Georgia,serif;color:var(--gold);margin:0;padding:22px 0}
+.floor-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}.floor-group{padding:18px 0 22px;border-top:1px solid rgba(255,255,255,.12)}.floor-group small{display:block;color:var(--gold);font:400 9px 'Paganini',Georgia,serif;letter-spacing:.17em;margin-bottom:9px}.floor-group strong{display:block;color:#f4efe7;font:400 16px 'Paganini',Georgia,serif;margin-bottom:5px}.floor-group p{margin:0;color:var(--muted);font-size:11px;line-height:1.8}
+.image-modal-figure{width:min(1100px,94vw)}.facility-modal-detail[hidden]{display:none!important}.facility-modal-detail{width:100%;max-width:760px;margin-top:20px;padding:18px 22px;border:1px solid rgba(184,154,99,.35);background:rgba(28,12,17,.88);display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;text-align:left}
+.facility-modal-detail div small{display:block;color:var(--gold);font:400 9px 'Paganini',Georgia,serif;letter-spacing:.16em;margin-bottom:6px}.facility-modal-detail div strong{font:400 14px 'Paganini',Georgia,serif;color:#f4efe7}.facility-modal-detail p{grid-column:1/-1;margin:2px 0 0;color:#c9beb2;font-size:11px;line-height:1.8}
+@media(max-width:900px){.facility-schedule{grid-template-columns:repeat(3,1fr)}.facility-schedule-item:nth-child(3){border-right:0}.facility-schedule-item:nth-child(n+4){border-top:1px solid rgba(184,154,99,.22)}}
+@media(max-width:700px){.facility-meta{display:none}.facility-schedule{grid-template-columns:repeat(2,1fr);margin-top:30px}.facility-schedule-item:nth-child(odd){border-right:1px solid rgba(184,154,99,.22)}.facility-schedule-item:nth-child(even){border-right:0}.facility-schedule-item:nth-child(3){border-top:1px solid rgba(184,154,99,.22)}.facility-schedule-item:nth-child(4){border-top:1px solid rgba(184,154,99,.22)}.facility-schedule-item:nth-child(5){border-top:1px solid rgba(184,154,99,.22)}.facility-schedule-item:nth-child(6){border-top:1px solid rgba(184,154,99,.22)}.floor-grid{grid-template-columns:1fr}.floor-guide{margin-top:36px}.facility-modal-detail{grid-template-columns:1fr;gap:10px;padding:15px}.facility-modal-detail p{grid-column:auto}.image-modal{padding:60px 16px 24px}.image-modal img{max-width:90vw;max-height:54vh}}
+
+
+/* 2026-10-31 refinement: floor columns, facility details and room alignment */
+.floor-columns{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}
+.floor-column{min-width:0}
+.floor-column-title{display:flex;justify-content:space-between;align-items:center;padding:0 0 14px;border-bottom:1px solid rgba(184,154,99,.55);color:var(--gold);font:400 11px 'Paganini',Georgia,serif;letter-spacing:.18em}
+.floor-column-title span{opacity:.7;font-size:9px}
+.floor-column .floor-group{padding:17px 0 18px}
+.floor-column .floor-group strong{font-size:15px}
+.floor-column .floor-group p{font-size:11px;line-height:1.75}
+.facility-schedule{grid-template-columns:repeat(3,minmax(0,1fr))}
+.facility-schedule-item{min-height:112px}
+.room-grid{align-items:end}
+.room-suite,.room-deluxe{margin-top:0;align-self:end}
+.room-suite{min-height:560px}
+.room-deluxe{min-height:440px}
+.image-modal-figure{width:min(1320px,94vw);max-width:1320px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(270px,.7fr);grid-template-rows:auto auto;align-items:center;gap:18px 28px}
+.image-modal img{grid-column:1;grid-row:1 / span 2;max-width:100%;max-height:82vh;width:100%;height:auto;object-fit:contain}
+.image-modal-caption{grid-column:2;grid-row:1;align-self:end;text-align:left;margin:0 0 4px;font-size:13px;letter-spacing:.18em}
+.facility-modal-detail{grid-column:2;grid-row:2;width:100%;max-width:none;margin:0;padding:22px 20px;align-self:start;grid-template-columns:1fr;gap:16px}
+.facility-modal-detail p{grid-column:1}
+@media(max-width:760px){
+ .floor-columns{grid-template-columns:1fr;gap:28px}
+ .facility-schedule{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .room-suite{min-height:420px}
+ .room-deluxe{min-height:360px}
+ .image-modal-figure{display:flex;flex-direction:column;align-items:stretch;width:94vw;max-width:94vw;gap:12px}
+ .image-modal img{width:100%;max-width:100%;max-height:58vh}
+ .image-modal-caption{text-align:left;margin:4px 0}
+ .facility-modal-detail{width:100%;margin:0;grid-template-columns:1fr 1fr}
+}
+
+
+
+/* FACILITIES — access-based editorial grouping */
+.facility-audience{margin-top:58px}
+.facility-audience + .facility-audience{margin-top:76px;padding-top:42px;border-top:1px solid rgba(184,154,99,.32)}
+.facility-audience-head{display:flex;align-items:flex-start;gap:30px;margin-bottom:24px}
+.facility-audience-head>span{flex:0 0 190px;padding-top:8px;color:var(--gold);font:400 10px 'Paganini',Georgia,serif;letter-spacing:.2em}
+.facility-audience-head h3{margin:0;color:var(--ivory);font:400 clamp(25px,3vw,38px) 'Paganini',Georgia,serif;letter-spacing:.025em}
+.facility-audience-head p{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
+.facility-audience .facility-grid{margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))}
+.facility-audience:not(.vip-audience) .facility-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.vip-audience .facility-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:700px){
+ .facility-audience{margin-top:42px}
+ .facility-audience + .facility-audience{margin-top:54px;padding-top:30px}
+ .facility-audience-head{display:block;margin-bottom:18px}
+ .facility-audience-head>span{display:block;margin-bottom:12px;padding:0}
+ .facility-audience-head h3{font-size:27px}
+ .facility-audience-head p{font-size:11px}
+ .facility-audience .facility-grid,.facility-audience:not(.vip-audience) .facility-grid,.vip-audience .facility-grid{grid-template-columns:1fr;gap:12px}
+}
+
+
+
+/* Two-column access comparison: Visitors / VIP Suite Guests */
+.facility-audience-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start;margin-top:58px}
+.facility-audience-columns .facility-audience{margin-top:0;min-width:0}
+.facility-audience-columns .facility-audience + .facility-audience{margin-top:0;padding:0 0 0 32px;border-top:0;border-left:1px solid rgba(184,154,99,.32)}
+.facility-audience-head{display:block;min-height:112px;margin-bottom:22px}
+.facility-audience-head>span{display:block;margin-bottom:13px;padding:0}
+.facility-audience-head h3{font-size:clamp(24px,2.5vw,34px)}
+.facility-audience-columns .facility-grid,
+.facility-audience-columns .facility-audience:not(.vip-audience) .facility-grid,
+.facility-audience-columns .vip-audience .facility-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.facility-audience-columns .facility{aspect-ratio:3/4}
+@media(max-width:700px){
+ .facility-audience-columns{grid-template-columns:1fr;gap:34px;margin-top:42px}
+ .facility-audience-columns .facility-audience + .facility-audience{padding:30px 0 0;border-left:0;border-top:1px solid rgba(184,154,99,.32)}
+ .facility-audience-head{min-height:0;margin-bottom:18px}
+ .facility-audience-head h3{font-size:27px}
+ .facility-audience-columns .facility-grid,
+ .facility-audience-columns .facility-audience:not(.vip-audience) .facility-grid,
+ .facility-audience-columns .vip-audience .facility-grid{grid-template-columns:1fr;gap:12px}
+ .facility-audience-columns .facility{aspect-ratio:4/5}
+}
+
+
+/* VESPER update: modal image carousels */
+.facility-modal-carousel{position:relative;display:flex;align-items:center;justify-content:center;width:100%;gap:12px}.facility-modal-carousel img{width:100%;max-height:66vh;object-fit:contain;flex:1;min-width:0}.facility-slide-arrow,.room-gallery-controls button{border:1px solid rgba(190,151,91,.65);background:rgba(22,17,18,.88);color:#d6b477;width:42px;height:42px;flex:0 0 42px;cursor:pointer;font-size:20px;transition:background .2s}.facility-slide-arrow:hover,.room-gallery-controls button:hover{background:#6c1d31}.facility-slide-dots,.room-gallery-dots{display:flex;justify-content:center;gap:8px;padding:14px 0}.facility-slide-dot,.room-gallery-dot{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:rgba(190,151,91,.35);cursor:pointer}.facility-slide-dot.active,.room-gallery-dot.active{background:#c9a568;transform:scale(1.25)}.room-detail-gallery{display:block!important;overflow:hidden}.room-gallery-viewport{overflow:hidden;width:100%}.room-gallery-track{display:flex;transition:transform .45s cubic-bezier(.2,.7,.2,1);touch-action:pan-y}.room-gallery-track .room-detail-item{flex:0 0 100%;width:100%;margin:0}.room-gallery-track .room-detail-item img{display:block;width:100%;max-height:68vh;object-fit:contain}.room-gallery-controls{display:flex;align-items:center;justify-content:center;gap:18px}.room-gallery-controls button{background:transparent}.room-gallery-controls .room-gallery-dots{padding:12px 0}.facility-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}@media(max-width:640px){.facility-modal-carousel{gap:5px}.facility-slide-arrow{width:32px;height:36px;flex-basis:32px}.room-gallery-track .room-detail-item img{max-height:52vh}.facility-grid{grid-template-columns:1fr!important}}
+
+
+/* Facility modal layout fix */
+.image-modal-figure{grid-template-columns:minmax(0,1.62fr) minmax(300px,.78fr)!important;grid-template-rows:auto auto!important;align-items:start!important;column-gap:34px!important;row-gap:14px!important}
+.facility-modal-carousel{grid-column:1!important;grid-row:1!important;width:100%;min-width:0;align-self:center}
+.facility-modal-carousel img{display:block;width:100%;height:min(72vh,760px);max-height:72vh;object-fit:contain!important;min-width:0}
+.facility-slide-dots{grid-column:1!important;grid-row:2!important;align-self:start;margin:0;padding:8px 0 0!important}
+.image-modal-caption{grid-column:2!important;grid-row:1!important;align-self:end!important}
+.facility-modal-detail{grid-column:2!important;grid-row:2!important;align-self:start!important}
+.image-modal-figure.visitor-single-image .facility-slide-arrow,.image-modal-figure.visitor-single-image .facility-slide-dots{display:none!important}
+.image-modal-figure.visitor-single-image .facility-modal-carousel{grid-row:1 / span 2!important}
+@media(max-width:760px){.image-modal-figure{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:15px!important}.facility-modal-carousel{width:100%;gap:5px}.facility-modal-carousel img{height:auto;max-height:48vh;object-fit:contain!important}.facility-slide-dots{padding:5px 0!important}.image-modal-figure.visitor-single-image .facility-modal-carousel{display:block}}
+
+
+/* FINAL REVISION — stacked access groups, three-column cards, stable modal grid */
+.facility-audience-columns{display:flex!important;flex-direction:column!important;gap:58px!important;align-items:stretch!important;margin-top:58px!important}
+.facility-audience-columns .facility-audience{width:100%;margin:0!important;padding:0!important;min-width:0}
+.facility-audience-columns .facility-audience + .facility-audience{margin:0!important;padding:42px 0 0!important;border:0!important;border-top:1px solid rgba(184,154,99,.32)!important}
+.facility-audience-columns .facility-audience-head{display:flex!important;align-items:flex-start!important;gap:30px!important;min-height:0!important;margin-bottom:24px!important}
+.facility-audience-columns .facility-audience-head>span{flex:0 0 190px!important;display:block!important;margin:0!important;padding-top:8px!important}
+.facility-audience-columns .facility-audience-head h3{font-size:clamp(25px,3vw,38px)!important}
+.facility-audience-columns .facility-grid,
+.facility-audience-columns .facility-audience:not(.vip-audience) .facility-grid,
+.facility-audience-columns .vip-audience .facility-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+.facility-audience-columns .facility{aspect-ratio:3/4!important;min-width:0}
+.image-modal{overflow-y:auto!important}
+.image-modal-figure{width:min(1500px,94vw)!important;max-width:1500px!important;max-height:none!important;grid-template-columns:minmax(0,1.5fr) minmax(300px,.78fr)!important;grid-template-rows:auto auto!important;align-items:start!important;gap:12px 34px!important}
+.image-modal-figure .facility-modal-carousel{grid-column:1!important;grid-row:1!important;align-self:center!important;min-width:0!important}
+.image-modal-figure .facility-modal-carousel img,
+.image-modal-figure #facilityModalImage{grid-column:auto!important;grid-row:auto!important;width:100%!important;height:min(68vh,720px)!important;max-height:68vh!important;object-fit:contain!important;box-shadow:0 24px 90px rgba(0,0,0,.42)}
+.image-modal-figure .facility-slide-dots{grid-column:1!important;grid-row:2!important;justify-content:center!important;align-self:start!important;margin:0!important;padding:8px 0 0!important}
+.image-modal-figure .image-modal-caption{grid-column:2!important;grid-row:1!important;align-self:center!important;margin:0 0 8px!important;text-align:center!important}
+.image-modal-figure .facility-modal-detail{grid-column:2!important;grid-row:2!important;align-self:center!important;justify-self:center!important;width:100%!important;max-width:none!important;margin:0!important;text-align:center!important}
+.image-modal-figure.visitor-single-image .facility-slide-arrow,
+.image-modal-figure.visitor-single-image .facility-slide-dots{display:none!important}
+.image-modal-figure.visitor-single-image .facility-modal-carousel{grid-row:1 / span 2!important}
+@media(max-width:760px){
+ .facility-audience-columns{gap:42px!important;margin-top:42px!important}
+ .facility-audience-columns .facility-audience + .facility-audience{padding-top:30px!important}
+ .facility-audience-columns .facility-audience-head{display:block!important;margin-bottom:18px!important}
+ .facility-audience-columns .facility-audience-head>span{display:block!important;margin-bottom:12px!important;padding:0!important}
+ .facility-audience-columns .facility-audience-head h3{font-size:27px!important}
+ .facility-audience-columns .facility-grid,
+ .facility-audience-columns .facility-audience:not(.vip-audience) .facility-grid,
+ .facility-audience-columns .vip-audience .facility-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ .facility-audience-columns .facility{aspect-ratio:4/5!important}
+ .image-modal{padding:72px 16px 24px!important;align-items:flex-start!important}
+ .image-modal-figure{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%!important;max-width:100%!important;gap:12px!important}
+ .image-modal-figure .facility-modal-carousel{width:100%!important;gap:5px!important}
+ .image-modal-figure .facility-modal-carousel img,
+ .image-modal-figure #facilityModalImage{width:100%!important;height:auto!important;max-height:48vh!important;object-fit:contain!important}
+ .image-modal-figure .image-modal-caption{margin:5px 0 0!important}
+ .image-modal-figure .facility-modal-detail{width:100%!important;margin:0!important;padding:19px!important;grid-template-columns:1fr!important;gap:14px!important}
+ .image-modal-figure .facility-modal-detail p{grid-column:1!important}
+ .image-modal-figure.visitor-single-image .facility-modal-carousel{display:block!important}
+}
+@media(max-width:420px){.facility-audience-columns .facility-grid,.facility-audience-columns .facility-audience:not(.vip-audience) .facility-grid,.facility-audience-columns .vip-audience .facility-grid{grid-template-columns:1fr!important}}
+
 </style>
+
+<style>
+/* V6 — facility detail window: image-led two-column composition */
+.facility-schedule{display:none!important}
+.image-modal{padding:42px 5vw;align-items:center}
+.image-modal-figure{width:min(1500px,94vw);max-width:1500px;max-height:88vh;display:grid;grid-template-columns:minmax(0,1.62fr) minmax(300px,.78fr);grid-template-rows:auto 1fr;align-items:center;gap:14px 34px}
+.image-modal img{grid-column:1;grid-row:1 / span 2;width:100%;max-width:100%;height:min(72vh,760px);max-height:72vh;object-fit:cover;box-shadow:0 24px 90px rgba(0,0,0,.42)}
+.image-modal-caption{grid-column:2;grid-row:1;align-self:end;text-align:left;margin:0 0 8px;color:#f4efe7;font-size:clamp(15px,1.1vw,20px);letter-spacing:.12em}
+.facility-modal-detail{grid-column:2;grid-row:2;width:100%;max-width:none;margin:0;padding:26px 24px;border:1px solid rgba(184,154,99,.42);background:linear-gradient(145deg,rgba(42,17,25,.96),rgba(20,9,13,.96));display:grid;grid-template-columns:1fr;gap:20px;align-self:start;text-align:left}
+.facility-modal-detail div{padding-bottom:15px;border-bottom:1px solid rgba(184,154,99,.2)}
+.facility-modal-detail div small{display:block;color:var(--gold);font:400 9px 'Paganini',Georgia,serif;letter-spacing:.18em;margin-bottom:9px}
+.facility-modal-detail div strong{font:400 17px 'Paganini',Georgia,serif;color:#f4efe7;line-height:1.5}
+.facility-modal-detail p{grid-column:1;margin:0;color:#d4c8bd;font-size:12px;line-height:1.9}
+.image-modal-close{position:fixed;top:24px;right:34px;padding:11px 17px;border:1px solid rgba(184,154,99,.55);border-radius:999px;background:rgba(17,8,11,.62);backdrop-filter:blur(10px);color:#f4efe7;font-size:10px;letter-spacing:.16em}
+.image-modal-close:hover{background:var(--gold);color:#211015;border-color:var(--gold)}
+@media(max-width:760px){.image-modal{padding:72px 16px 24px;overflow-y:auto;align-items:flex-start}.image-modal-figure{display:flex;flex-direction:column;align-items:stretch;width:100%;max-width:100%;max-height:none;gap:15px}.image-modal img{width:100%;height:auto;max-height:48vh;object-fit:cover}.image-modal-caption{margin:5px 0 0;font-size:14px}.facility-modal-detail{width:100%;margin:0;padding:19px;grid-template-columns:1fr;gap:14px}.facility-modal-detail div{padding-bottom:12px}.facility-modal-detail p{font-size:11px}.image-modal-close{top:12px;right:14px;padding:9px 13px}}
+</style>
+
+
+<style id="v12-facility-korean-font-and-room-dots-fix">
+/* FACILITIES: retain the approved right-column placement, with left-aligned title and details */
+.image-modal-figure{position:relative!important}
+.image-modal-figure .image-modal-caption{position:absolute!important;right:0!important;top:calc(50% - 165px)!important;width:calc((100% - 34px) * .325)!important;margin:0!important;padding:0 22px!important;text-align:left!important;align-self:auto!important}
+.image-modal-figure .facility-modal-detail{position:absolute!important;right:0!important;top:calc(50% - 105px)!important;transform:none!important;width:calc((100% - 34px) * .325)!important;max-width:none!important;align-self:auto!important;justify-self:auto!important;grid-column:auto!important;grid-row:auto!important;text-align:left!important}
+/* Korean locale: apply the supplied SUIT font to every Korean detail field, including labels and values */
+body.lang-ko .image-modal-figure .facility-modal-detail,
+body.lang-ko .image-modal-figure .facility-modal-detail *{font-family:'SUIT',sans-serif!important;font-weight:400!important}
+body.lang-ko .image-modal-figure .facility-modal-detail p{line-height:1.9}
+/* Room gallery pagination: exact circular dots, 6px diameter, 31px spacing, with more space below the image */
+.room-gallery-controls .room-gallery-dots{gap:31px!important;padding:26px 0 12px!important;margin-top:4px!important}
+.room-gallery-dot{display:block!important;box-sizing:border-box!important;width:6px!important;height:6px!important;min-width:6px!important;min-height:6px!important;flex:0 0 6px!important;aspect-ratio:1/1!important;border:0!important;border-radius:50%!important;padding:0!important;transform:none!important}
+.room-gallery-dot.active{transform:none!important}
+@media(max-width:760px){
+ .image-modal-figure .image-modal-caption{position:static!important;width:100%!important;margin:5px 0 0!important;padding:0!important;text-align:left!important}
+ .image-modal-figure .facility-modal-detail{position:static!important;transform:none!important;width:100%!important;margin:0!important;text-align:left!important}
+ .room-gallery-controls .room-gallery-dots{gap:24px!important;padding:20px 0 10px!important}
+}
+</style>
+<!-- V12: SUIT modal details, left-aligned facility heading/details, circular room dots 6px / 31px gap -->
+
+<style id="v13-nav-and-room-dots-refinement">
+/* Room gallery pagination: slightly larger, perfectly round dots */
+.room-gallery-dot{width:8px!important;height:8px!important;min-width:8px!important;min-height:8px!important;flex:0 0 8px!important;aspect-ratio:1/1!important;border-radius:50%!important}
+.room-gallery-dot.active{transform:none!important}
+/* Navigation brand and independent Instagram link */
+.nav-brand{width:auto!important;flex:0 0 auto!important;display:block!important;text-decoration:none!important;white-space:nowrap!important;color:#f2e8dc!important;font:400 19px/1 'Paganini',Georgia,serif!important;letter-spacing:.025em!important;text-transform:none!important}
+.nav-brand img{display:none!important}
+.nav-links{gap:clamp(13px,1.65vw,25px)!important}
+.nav-links .nav-social{margin-left:clamp(34px,5.5vw,88px)!important;padding-left:clamp(22px,2.8vw,42px)!important;border-left:1px solid rgba(216,187,143,.34)!important;color:#e0c18a!important}
+@media(max-width:980px) and (min-width:701px){.nav-brand{font-size:17px!important}.nav-links .nav-social{margin-left:18px!important;padding-left:15px!important}}
+@media(max-width:700px){.nav-brand{font-size:18px!important}.nav-links .nav-social{margin-left:0!important;padding-left:0!important;border-left:0!important}}
+</style>
+
+
+<style id="v14-room-dots-arrows-instagram">
+/* Room detail pagination: 12px true circles, gold outline when inactive */
+.room-gallery-controls .room-gallery-dots{gap:24px!important;padding:28px 0 12px!important;margin-top:6px!important}
+.room-gallery-dot{display:block!important;box-sizing:border-box!important;width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important;flex:0 0 12px!important;aspect-ratio:1/1!important;border:1px solid #c9a568!important;border-radius:50%!important;padding:0!important;background:transparent!important;transform:none!important}
+.room-gallery-dot.active{background:#c9a568!important;border-color:#c9a568!important;transform:none!important}
+/* More breathing room between facility image and previous/next controls */
+.facility-modal-carousel{gap:30px!important}
+.facility-slide-arrow{flex:0 0 42px!important}
+@media(max-width:760px){.facility-modal-carousel{gap:14px!important}.facility-slide-arrow{flex-basis:34px!important;width:34px!important}}
+/* Instagram is a separate outlined utility button, not part of the section navigation */
+.nav-instagram{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 17px;border:1px solid rgba(216,187,143,.72);border-radius:999px;background:rgba(24,10,15,.18);color:#e0c18a;text-decoration:none;white-space:nowrap;font:400 10px 'Paganini',Georgia,serif;letter-spacing:.12em;transition:background .25s,color .25s,border-color .25s}
+.nav-instagram:hover{background:var(--gold);border-color:var(--gold);color:#211015}
+.nav-links{flex:0 1 auto;gap:clamp(12px,1.5vw,23px)!important}
+@media(max-width:980px) and (min-width:701px){.nav{gap:10px!important}.nav-instagram{padding:0 11px;font-size:9px}.nav-links{gap:9px!important}.language-toggle{padding:9px 11px}}
+@media(max-width:700px){.nav-instagram{display:none!important}}
+</style>
+
+
+<style id="v15-navigation-and-facility-title-alignment">
+/* Header: separate primary navigation from the utility-button group */
+.nav{justify-content:space-between!important;gap:0!important}
+.nav-brand{flex:0 0 auto!important;margin-right:clamp(14px,2vw,30px)!important}
+.nav-links{flex:1 1 auto!important;min-width:0!important;justify-content:center!important;margin:0 auto!important;gap:clamp(12px,1.5vw,23px)!important}
+.nav-utility{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:12px!important;flex:0 0 auto!important;margin-left:clamp(48px,7vw,116px)!important}
+.nav-instagram{margin:0!important}
+.nav-utility .language-toggle{flex:0 0 auto!important}
+/* Align the facility title with the text inset inside the information panel */
+.image-modal-figure .image-modal-caption{padding-left:24px!important;padding-right:24px!important;text-align:left!important}
+@media(max-width:980px) and (min-width:701px){
+ .nav{padding-left:18px!important;padding-right:18px!important}
+ .nav-brand{margin-right:10px!important;font-size:16px!important}
+ .nav-links{gap:9px!important;font-size:9px!important}
+ .nav-utility{margin-left:22px!important;gap:8px!important}
+ .nav-instagram{padding:0 10px!important;font-size:9px!important}
+ .nav-utility .language-toggle{padding:9px 10px!important;font-size:9px!important}
+}
+@media(max-width:700px){
+ .nav-utility{display:none!important}
+ .nav>.language-toggle{display:none!important}
+ .image-modal-figure .image-modal-caption{padding:0!important}
+}
+</style>
+
 </head>
 <body>
 <div class="site">
-<nav class="nav" id="nav"><a class="nav-brand" href="#top" aria-label="VESPER home"><img src="./logo/logo_main.png" alt="VESPER"></a><div class="nav-links"><a href="#hotel">Hotel</a><a href="#facilities">Facilities</a><a href="#rooms">Rooms</a><a href="#archive">The Archive</a><a href="#reserve">Reserve</a></div><button class="nav-menu" id="menuOpen" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">MENU</button></nav>
-<div class="menu-panel" id="mobileMenu" aria-hidden="true"><button class="menu-close" id="menuClose" type="button" aria-label="Close menu">CLOSE</button><div class="mobile-links"><a href="#hotel">Hotel</a><a href="#facilities">Facilities</a><a href="#rooms">Rooms</a><a href="#archive">The Archive</a><a href="#reserve">Reserve</a></div><div class="mobile-menu-footer">VESPER HOTEL · PRIVATE NIGHT RESORT</div></div>
+<nav class="nav" id="nav"><a class="nav-brand" href="#top" aria-label="VESPER HOTEL home">Vesper Hotel</a><div class="nav-links"><a href="#hotel">Hotel</a><a href="#facilities">Facilities</a><a href="#rooms">Rooms</a><a href="#archive">The Archive</a><a href="#reserve">Reserve</a></div><div class="nav-utility"><a class="nav-instagram" href="https://www.instagram.com/vgomad" target="_blank" rel="noopener noreferrer" aria-label="Visit Vesper on Instagram">Instagram ↗</a><button class="language-toggle" type="button" data-lang-toggle>ENGLISH VERSION</button></div><button class="nav-menu" id="menuOpen" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">MENU</button></nav>
+<div class="menu-panel" id="mobileMenu" aria-hidden="true"><button class="menu-close" id="menuClose" type="button" aria-label="Close menu">CLOSE</button><div class="mobile-links"><a href="#hotel">Hotel</a><a href="#facilities">Facilities</a><a href="#rooms">Rooms</a><a href="#archive">The Archive</a><a href="#reserve">Reserve</a></div><div class="mobile-menu-footer">VESPER HOTEL · PRIVATE NIGHT RESORT<br><a class="mobile-instagram" href="https://www.instagram.com/vgomad" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><br><button class="language-toggle mobile-language-toggle" type="button" data-lang-toggle>ENGLISH VERSION</button></div></div>
 <header class="hero" id="top"><div class="hero-content reveal"><div class="eyebrow">PRIVATE NIGHT RESORT · EST. 1897</div><img class="hero-logo" src="./logo/logo_main.png" alt="VESPER"><div class="tag">A QUIET PLACE AFTER DARK</div><a class="cta" href="#hotel">ENTER THE HOTEL</a></div></header>
-<section class="intro reveal" id="hotel"><div><div class="kicker">THE VESPER EXPERIENCE</div><h2>Night,<br>reimagined.</h2></div><div><p>새벽 두 시, 가장 고요한 시간에 문이 열립니다. VESPER는 밤을 살아가는 이들을 위해 설계된 프라이빗 럭셔리 리조트입니다. 오래된 귀족 저택의 절제된 우아함과 현대적인 휴양 공간이 만나, 세상과 잠시 분리된 시간을 선사합니다.</p></div></section>
-<section class="hotel-image reveal"><div class="media"><img src="./images/hotel_exterior.png" alt="VESPER HOTEL exterior" loading="lazy"></div><div class="hotel-copy"><div class="kicker house-title">THE HOUSE OF VESPER</div><h2>A private world,<br>after dark.</h2><p>도시의 소음과 빛으로부터 한 걸음 물러난 곳, VESPER의 외관은 밤의 정적을 건축으로 표현합니다. 밤이 깊어질수록 더욱 선명해지는 공간의 디테일과 절제된 조명이 VESPER만의 세계로 당신을 초대합니다.</p><div class="image-caption">VESPER HOTEL · EXTERIOR</div></div></section>
+<section class="intro reveal" id="hotel"><div><div class="kicker">THE VESPER EXPERIENCE</div><h2>Night,<br>reimagined.</h2></div><div><p data-i18n="intro">새벽 두 시, 가장 고요한 시간에 문이 열립니다. VESPER는 밤을 살아가는 이들을 위해 설계된 프라이빗 럭셔리 리조트입니다. 오래된 귀족 저택의 절제된 우아함과 현대적인 휴양 공간이 만나, 세상과 잠시 분리된 시간을 선사합니다.</p></div></section>
+<section class="hotel-image reveal"><div class="media"><img src="./images/hotel_exterior.png" alt="VESPER HOTEL exterior" loading="lazy"></div><div class="hotel-copy"><div class="kicker house-title">THE HOUSE OF VESPER</div><h2>A private world,<br>after dark.</h2><p data-i18n="hotelCopy">도시의 소음과 빛으로부터 한 걸음 물러난 곳, VESPER의 외관은 밤의 정적을 건축으로 표현합니다. 밤이 깊어질수록 더욱 선명해지는 공간의 디테일과 절제된 조명이 VESPER만의 세계로 당신을 초대합니다.</p><div class="image-caption">VESPER HOTEL · EXTERIOR</div></div></section>
 <section class="night reveal"><div class="eyebrow">A HOTEL OUTSIDE ORDINARY HOURS</div><h2>Only the night knows<br>what happens here.</h2><div class="stats"><div class="stat"><div class="num">02:00</div><div class="label">CHECK-IN</div></div><div class="stat"><div class="num">00:00</div><div class="label">CHECK-OUT</div></div><div class="stat"><div class="num">24/7</div><div class="label">GUEST INQUIRIES</div></div></div></section>
-<section class="facilities reveal" id="facilities"><div class="facility-head"><div><div class="kicker">THE VESPER FACILITIES</div><h2>Beyond<br>the room.</h2></div><p>수영장부터 스파, 다이닝과 라운지까지. 객실 밖의 모든 순간도 VESPER만의 밤을 경험하도록 설계됩니다.</p></div><div class="facility-grid">
-<article class="facility" role="button" tabindex="0" aria-label="View Indoor Pool image" data-facility="Indoor Pool"><img src="./images/indoor_pool.jpg" alt="Indoor Pool" loading="lazy"><div class="facility-info"><div class="facility-no">01 · POOL</div><h3>Indoor Pool</h3><p>빛을 낮춘 실내 수영장</p></div></article>
-<article class="facility" role="button" tabindex="0" aria-label="View Outdoor Pool image" data-facility="Outdoor Pool"><img src="./images/outdoor_pool.jpg" alt="Outdoor Pool" loading="lazy"><div class="facility-info"><div class="facility-no">02 · POOL</div><h3>Outdoor Pool</h3><p>밤의 풍경과 이어지는 야외 수영장</p></div></article>
-<article class="facility" role="button" tabindex="0" aria-label="View The Lounge image" data-facility="The Lounge"><img src="./images/The Lounge.jpg" alt="The Lounge" loading="lazy"><div class="facility-info"><div class="facility-no">03 · LOUNGE</div><h3>The Lounge</h3><p>밤이 깊어질수록 조용해지는 공간</p></div></article>
-<article class="facility" role="button" tabindex="0" aria-label="View Vesper Spa image" data-facility="Vesper Spa"><img src="./images/Vesper Spa.jpg" alt="Vesper Spa" loading="lazy"><div class="facility-info"><div class="facility-no">04 · SPA</div><h3>Vesper Spa</h3><p>밤의 리듬에 맞춘 프라이빗 케어</p></div></article>
-<article class="facility" role="button" tabindex="0" aria-label="View Private Dining image" data-facility="Private Dining"><img src="./images/private_dining.jpg" alt="Private Dining" loading="lazy"><div class="facility-info"><div class="facility-no">05 · DINING</div><h3>Private Dining</h3><p>초대받은 이들을 위한 은밀한 식사</p></div></article>
-<article class="facility" role="button" tabindex="0" aria-label="View Vesper Restaurant image" data-facility="Vesper Restaurant"><img src="./images/restaurant.jpg" alt="Vesper Restaurant" loading="lazy"><div class="facility-info"><div class="facility-no">06 · RESTAURANT</div><h3>Vesper Restaurant</h3><p>밤의 시간을 위한 시그니처 다이닝</p></div></article>
-</div></section>
-<section class="rooms reveal" id="rooms"><div class="kicker">STAY AT VESPER</div><h2>Rooms &amp; Suites</h2><div class="room-grid"><article class="room" role="button" tabindex="0" aria-label="View Vesper Deluxe details" data-room="Vesper Deluxe"><img src="./images/Vesper Deluxe.jpg" alt="Vesper Deluxe" loading="lazy"><div class="room-info"><span>01 · ROOM</span><h3>Vesper Deluxe</h3><button class="room-link" type="button">VIEW ROOM</button></div></article><article class="room" role="button" tabindex="0" aria-label="View Midnight Suite details" data-room="Midnight Suite"><img src="./images/Midnight Suite.jpg" alt="Midnight Suite" loading="lazy"><div class="room-info"><span>02 · SUITE</span><h3>Midnight Suite</h3><button class="room-link" type="button">VIEW SUITE</button></div></article></div></section>
+<section class="facilities reveal" id="facilities"><div class="facility-head"><div><div class="kicker">THE VESPER FACILITIES</div><h2>Beyond<br>the room.</h2></div><p data-i18n="facilitiesIntro">수영장부터 스파, 다이닝과 라운지까지. 객실 밖의 모든 순간도 VESPER만의 밤을 경험하도록 설계됩니다.</p></div><div class="facility-audience-columns">
+<div class="facility-audience">
+  <div class="facility-audience-head"><span>01 / OPEN ACCESS</span><div><h3>FOR VISITORS</h3><p data-i18n="facilityVisitorsIntro">일반 투숙객이 함께 이용할 수 있는 공용 시설</p></div></div>
+  <div class="facility-grid">
+<article class="facility" role="button" tabindex="0" aria-label="Discover Reception" data-facility="Reception"><img src="./images/reseption.jpg" alt="Reception" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">01 · RECEPTION</div><h3>Reception</h3><p data-i18n="facilityReception">머무는 순간을 안내하는 리셉션</p></div></article>
+<article class="facility" role="button" tabindex="0" aria-label="Discover Vesper Restaurant" data-facility="Vesper Restaurant"><img src="./images/restaurant.jpg" alt="Vesper Restaurant" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">02 · DINING</div><h3>Vesper Restaurant</h3><p data-i18n="facility6">밤의 시간을 위한 시그니처 다이닝</p></div></article>
+<article class="facility" role="button" tabindex="0" aria-label="Discover Indoor Pool" data-facility="Indoor Pool"><img src="./images/indoor_pool.jpg" alt="Indoor Pool" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">03 · POOL</div><h3>Indoor Pool</h3><p data-i18n="facility1">빛을 낮춘 실내 수영장</p></div></article>
+<article class="facility" role="button" tabindex="0" aria-label="Discover Public Spa" data-facility="Public Spa"><img src="./images/public_spa.jpg" alt="Public Spa" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">04 · SPA</div><h3>Public Spa</h3><p data-i18n="facilityPublicSpa">일반 투숙객을 위한 공용 스파</p></div></article>
+<article class="facility" role="button" tabindex="0" aria-label="Discover The Lounge" data-facility="The Lounge"><img src="./images/The Lounge.jpg" alt="The Lounge" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">05 · LOUNGE</div><h3>The Lounge</h3><p data-i18n="facility3">밤이 깊어질수록 조용해지는 공간</p></div></article>
+  </div>
+</div>
+<div class="facility-audience vip-audience">
+  <div class="facility-audience-head"><span>02 / EXCLUSIVE ACCESS</span><div><h3>FOR VIP SUITE GUESTS</h3><p data-i18n="facilityVipIntro">스위트룸 투숙객에게 제공되는 프라이빗 서비스</p></div></div>
+  <div class="facility-grid">
+<article class="facility" role="button" tabindex="0" aria-label="Discover Vesper Spa" data-facility="Vesper Spa"><img src="./images/Vesper Spa.jpg" alt="Vesper Spa" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">01 · SPA</div><h3>Vesper Spa</h3><p data-i18n="facility4">예약제로 운영되는 프라이빗 케어</p></div></article>
+<article class="facility" role="button" tabindex="0" aria-label="Discover Outdoor Pool" data-facility="Outdoor Pool"><img src="./images/outdoor_pool.jpg" alt="Outdoor Pool" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">02 · POOL</div><h3>Outdoor Pool</h3><p data-i18n="facility2">밤의 풍경과 이어지는 야외 수영장</p></div></article>
+<article class="facility" role="button" tabindex="0" aria-label="Discover VIP Restaurant" data-facility="VIP Restaurant"><img src="./images/private_dining.jpg" alt="VIP Restaurant" loading="lazy"><div class="facility-discover"><span>DISCOVER</span><b>↗</b></div><div class="facility-info"><div class="facility-no">03 · DINING</div><h3>VIP Restaurant</h3><p data-i18n="facilityVipDining">스위트룸 투숙객을 위한 프라이빗 다이닝</p></div></article>
+  </div>
+</div>
+</div>
+
+<div class="floor-guide"><h3>THE HOUSE, BY LEVEL</h3>
+<div class="floor-columns">
+ <div class="floor-column"><div class="floor-column-title">ABOVE GROUND <span>01—04</span></div>
+  <div class="floor-group"><small data-i18n="floor4Small">4F · 프라이빗 시설</small><strong>4F — PRIVATE</strong><p data-i18n="floor4Desc">VIP 라운지 · 프라이빗 이벤트 · 프리미엄 레스토랑 · 스위트룸 전용 야외 수영장</p></div>
+  <div class="floor-group"><small data-i18n="floor3Small">3F · 웰니스</small><strong>3F — WELLNESS</strong><p data-i18n="floor3Desc">스위트룸 투숙객 전용 프라이빗 스파 및 트리트먼트<br>3–4F 스카이 라운지 · 프라이빗 바</p></div>
+  <div class="floor-group"><small data-i18n="floor2Small">2F · 다이닝 및 소셜</small><strong>2F — DINING &amp; SOCIAL</strong><p data-i18n="floor2Desc">프라이빗 다이닝(예약 필수) · 비즈니스 라운지<br>회의실 · 세미나실</p></div>
+  <div class="floor-group"><small data-i18n="floor1Small">1F · 도착 및 안내</small><strong>1F — ARRIVAL</strong><p data-i18n="floor1Desc">그랜드 로비 · 리셉션 · 컨시어지 · 라운지</p></div>
+ </div>
+ <div class="floor-column"><div class="floor-column-title">BELOW GROUND <span>B1—B25</span></div>
+  <div class="floor-group"><small data-i18n="floorB1Small">B1 · 다이닝</small><strong>B1 — RESTAURANT &amp; BAR</strong><p data-i18n="floorB1Desc">레스토랑 · 바</p></div>
+  <div class="floor-group"><small data-i18n="floorB23Small">B2–B3 · 레저</small><strong>B2–B3 — INDOOR POOL &amp; PUBLIC SPA</strong><p data-i18n="floorB23Desc">실내 수영장 · 공용 스파</p></div>
+  <div class="floor-group"><small data-i18n="floorB4Small">B4–B20 · 객실</small><strong>B4–B20 — GUEST ROOMS</strong><p data-i18n="floorB4Desc">일반 객실 · 프리미엄 객실</p></div>
+  <div class="floor-group"><small data-i18n="floorB21Small">B21–B25 · 프라이빗</small><strong>B21–B25 — PRIVATE SUITES</strong><p data-i18n="floorB21Desc">프리미엄 스위트 · VIP 프라이빗 레지던스</p></div>
+ </div>
+</div></div>
+</section>
+<section class="rooms reveal" id="rooms"><div class="kicker">STAY AT VESPER</div><h2>Rooms &amp; Suites</h2><p class="rooms-intro" data-i18n="roomsIntro">고요와 그림자를 품은 객실. 누구에게도 방해받지 않는다는, 드물고도 특별한 사치를 경험하세요.</p><div class="room-grid"><article class="room room-suite" role="button" tabindex="0" aria-label="Discover Midnight Suite details" data-room="Midnight Suite"><img src="./images/Midnight Suite.jpg" alt="Midnight Suite" loading="lazy"><div class="room-info"><div class="room-copy"><span>02 · SUITE</span><h3>Midnight Suite</h3></div><button class="room-link" type="button">View Details</button></div></article><article class="room room-deluxe" role="button" tabindex="0" aria-label="Discover Vesper Deluxe details" data-room="Vesper Deluxe"><img src="./images/Vesper Deluxe.jpg" alt="Vesper Deluxe" loading="lazy"><div class="room-info"><div class="room-copy"><span>01 · ROOM</span><h3>Vesper Deluxe</h3></div><button class="room-link" type="button">View Details</button></div></article></div></section>
 <section class="archive reveal" id="archive">
   <div class="archive-head">
     <div><div class="kicker">A RECORD OF THE VESPER WORLD</div><h2>The Archive</h2></div>
-    <p>공간을 넘어 브랜드의 세계관을 완성하는 디자인 기록. VESPER의 시각 언어와 투숙 경험을 이루는 아이덴티티와 오브제를 한곳에 모았습니다.</p>
+    <p data-i18n="archiveIntro">공간을 넘어 브랜드의 세계관을 완성하는 디자인 기록. VESPER의 시각 언어와 투숙 경험을 이루는 아이덴티티와 오브제를 한곳에 모았습니다.</p>
   </div>
+  <div class="archive-groups-grid">
   <div class="archive-group">
     <div class="archive-group-title"><span>01</span><div><h3>Visual Identity</h3><p>Logo system, typography &amp; graphic elements</p></div></div>
-    <div class="archive-grid">
-      <article class="archive-item" role="button" tabindex="0" aria-label="View VESPER logo guidelines" data-archive="VISUAL IDENTITY · LOGO SYSTEM"><img src="./images/archive-identity-guidelines-01.jpg" alt="VESPER primary logo, sub-logo and monogram guidelines" loading="lazy"><div class="archive-caption"><span>LOGO SYSTEM</span><strong>Identity Guidelines I</strong></div></article>
-      <article class="archive-item" role="button" tabindex="0" aria-label="View VESPER graphic elements" data-archive="VISUAL IDENTITY · GRAPHIC ELEMENTS"><img src="./images/archive-identity-guidelines-02.jpg" alt="VESPER logo variations, color palette and graphic motifs" loading="lazy"><div class="archive-caption"><span>GRAPHIC ELEMENTS</span><strong>Identity Guidelines II</strong></div></article>
+    <div class="amenities-carousel identity-carousel" aria-label="VESPER visual identity carousel">
+      <div class="amenities-track" id="identityTrack">
+        <article class="archive-item amenities-slide" role="button" tabindex="0" aria-label="View VESPER logo guidelines" data-archive="VISUAL IDENTITY · LOGO SYSTEM"><img src="./images/archive-identity-guidelines-01.jpg" alt="VESPER primary logo, sub-logo and monogram guidelines" loading="lazy"><div class="archive-caption"><span>LOGO SYSTEM</span><strong>Identity Guidelines I</strong></div></article>
+        <article class="archive-item amenities-slide" role="button" tabindex="0" aria-label="View VESPER graphic elements" data-archive="VISUAL IDENTITY · GRAPHIC ELEMENTS"><img src="./images/archive-identity-guidelines-02.jpg" alt="VESPER logo variations, color palette and graphic motifs" loading="lazy"><div class="archive-caption"><span>GRAPHIC ELEMENTS</span><strong>Identity Guidelines II</strong></div></article>
+      </div>
+      <div class="amenities-controls"><button type="button" class="amenities-arrow" id="identityPrev" aria-label="Previous image">←</button><div class="amenities-progress"><span id="identityCount">01 / 02</span><div class="amenities-dots" id="identityDots" aria-label="Choose image"></div></div><button type="button" class="amenities-arrow" id="identityNext" aria-label="Next image">→</button></div>
     </div>
   </div>
   <div class="archive-group archive-amenities-group">
@@ -110,18 +544,36 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
       <div class="amenities-controls"><button type="button" class="amenities-arrow" id="amenitiesPrev" aria-label="Previous image">←</button><div class="amenities-progress"><span id="amenitiesCount">01 / 03</span><div class="amenities-dots" id="amenitiesDots" aria-label="Choose image"></div></div><button type="button" class="amenities-arrow" id="amenitiesNext" aria-label="Next image">→</button></div>
     </div>
   </div>
+  </div>
   <div class="archive-foot"><span>VESPER HOTEL · DESIGN ARCHIVE</span><span>IDENTITY / OBJECTS / EXPERIENCE</span></div>
 </section>
-<section class="reserve reveal" id="reserve"><div><div class="kicker">PRIVATE RESERVATIONS</div><h2>Stay after<br>dark.</h2><p>VESPER의 모든 객실은 제한된 시간과 초대된 투숙객을 위해 준비됩니다. 밤이 시작되는 시간, 당신만을 위한 가장 조용한 체크인을 경험해보세요.</p></div><div class="reserve-box"><small>RESERVATION DESK</small><strong>24-HOUR INQUIRIES</strong><a href="https://www.behance.net/been" target="_blank" rel="noopener noreferrer">VIEW DESIGN PORTFOLIO</a></div></section>
-<footer class="site-footer">
-  <div class="footer-brand">VESPER HOTEL <span>·</span> PRIVATE NIGHT RESORT</div>
-  <div class="footer-credit">
-    <p class="credit-ko">2026 졸업전시 작품 <strong>『VESPER HOTEL』</strong><br>디자이너 &amp; 기획 <strong>우빈 (Woo Been)</strong></p>
-    <p class="credit-en">2026 GRADUATION EXHIBITION · <strong>VESPER HOTEL</strong><br>DESIGN &amp; CREATIVE DIRECTION · <strong>WOO BEEN</strong></p>
-    <a class="footer-portfolio" href="https://www.behance.net/been" target="_blank" rel="noopener noreferrer">VIEW PORTFOLIO ↗</a>
+<section class="closing reveal" id="reserve">
+  <div class="closing-image"></div>
+  <div class="closing-shade"></div>
+  <div class="closing-content">
+    <div class="kicker">PRIVATE RESERVATIONS</div>
+    <h2>Stay after<br><em>dark.</em></h2>
+    <p data-i18n="reserveCopy">VESPER의 모든 객실은 제한된 시간과 초대된 투숙객을 위해 준비됩니다. 밤이 시작되는 시간, 당신만을 위한 가장 조용한 체크인을 경험해보세요.</p>
+    <div class="closing-actions">
+      <a href="https://www.behance.net/been" target="_blank" rel="noopener noreferrer">VIEW PROJECT <span>↗</span></a>
+      <a href="https://www.instagram.com/vgomad" target="_blank" rel="noopener noreferrer">INSTAGRAM <span>↗</span></a>
+    </div>
   </div>
-  <div class="footer-note">CONCEPT BRANDING &amp; DIGITAL EXPERIENCE<br>ALL DESIGNS BY WOO BEEN · 2026</div>
-</footer>
+  <div class="vesper-marquee" aria-label="A hotel for life after dark">
+    <div class="vesper-marquee-track" aria-hidden="true">
+      <span>A HOTEL FOR LIFE AFTER DARK <b>✠</b> NO SUNRISE REQUIRED <b>✠</b> THE ART OF DISAPPEARING <b>✠</b> A HOTEL FOR LIFE AFTER DARK <b>✠</b> NO SUNRISE REQUIRED <b>✠</b> THE ART OF DISAPPEARING <b>✠</b></span>
+      <span>A HOTEL FOR LIFE AFTER DARK <b>✠</b> NO SUNRISE REQUIRED <b>✠</b> THE ART OF DISAPPEARING <b>✠</b> A HOTEL FOR LIFE AFTER DARK <b>✠</b> NO SUNRISE REQUIRED <b>✠</b> THE ART OF DISAPPEARING <b>✠</b></span>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-brand">VESPER HOTEL <span>·</span><small>A HOTEL FOR LIFE AFTER DARK</small></div>
+    <div class="footer-links"><a href="https://www.instagram.com/vgomad" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a href="https://www.behance.net/been" target="_blank" rel="noopener noreferrer">BEHANCE ↗</a></div>
+    <div class="footer-credit">
+      <p class="credit-ko">2026 졸업전시 작품 <strong>『VESPER HOTEL』</strong><br>디자이너 &amp; 기획 <strong>우빈 (Woo Been)</strong></p>
+      <p class="credit-en">2026 GRADUATION EXHIBITION · <strong>VESPER HOTEL</strong><br>DESIGN &amp; CREATIVE DIRECTION · <strong>WOO BEEN</strong></p>
+    </div>
+  </footer>
+</section>
 </div>
 
 <div class="room-detail-modal" id="roomDetailModal" aria-hidden="true">
@@ -142,11 +594,68 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
   <div class="image-modal-backdrop" data-modal-close></div>
   <button class="image-modal-close" type="button" aria-label="Close image" data-modal-close>CLOSE</button>
   <figure class="image-modal-figure">
-    <img id="facilityModalImage" src="" alt="">
+    <div class="facility-modal-carousel"><button type="button" class="facility-slide-arrow prev" id="facilityPrev" aria-label="Previous image">←</button><img id="facilityModalImage" src="" alt=""><button type="button" class="facility-slide-arrow next" id="facilityNext" aria-label="Next image">→</button></div><div class="facility-slide-dots" id="facilitySlideDots"></div>
     <figcaption class="image-modal-caption" id="facilityModalCaption"></figcaption>
+    <div class="facility-modal-detail" id="facilityModalDetail" hidden></div>
   </figure>
 </div>
 <script>
+
+(function(){
+ const translations={
+  intro:"The doors open at two in the morning, when the world is at its quietest. VESPER is a private luxury resort conceived for those who live after dark, where the restrained elegance of an old aristocratic residence meets the ease of a contemporary retreat, offering a rare moment apart from the outside world.",
+  hotelCopy:"Set apart from the noise and glare of the city, VESPER’s architecture gives form to the stillness of night. As darkness deepens, carefully composed details and understated illumination reveal a world found only at VESPER.",
+  facilitiesIntro:"From pools and spa rituals to dining and the lounge, every moment beyond the guest room is designed to become part of the VESPER night.",
+  facilityVisitorsIntro:"Shared facilities available to all hotel guests.",
+  facilityVipIntro:"Private services and amenities reserved for VIP suite guests.",
+  facilityPublicSpa:"A shared wellness retreat for hotel guests.",
+  facilityReception:"A discreet welcome and attentive guest assistance.",
+  facilityVipDining:"An intimate dining experience reserved for suite guests.",
+  facility1:"An intimate indoor pool, softly illuminated for unhurried hours.",
+  facility2:"An open-air pool immersed in the atmosphere of the night.",
+  facility3:"A tranquil retreat that grows quieter as the evening unfolds.",
+  facility4:"Private treatments attuned to the rhythm of the night.",
+  facility5:"An intimate dining experience reserved for invited guests.",
+  facility6:"Signature dining, thoughtfully composed for the late hours.",
+  roomsIntro:"Rooms shaped by stillness and shadow. Experience the rare luxury of a retreat where no one can disturb your quiet.",
+  archiveIntro:"A design record that extends beyond the space to complete the VESPER universe. Explore the visual language, identity and considered objects that shape the guest experience.",
+  reserveCopy:"Every VESPER room is prepared for a limited number of hours and invited guests. As night begins, experience the quietest check-in, reserved entirely for you.",
+  floor4Small:"4F · PRIVATE FACILITIES", floor4Desc:"VIP lounge · Private events · Premium restaurant · Outdoor pool exclusively for suite guests",
+  floor3Small:"3F · WELLNESS", floor3Desc:"Private spa and treatments exclusively for suite guests · Sky lounge and private bar on 3F–4F",
+  floor2Small:"2F · DINING & SOCIAL", floor2Desc:"Private dining (reservation required) · Business lounge · Meeting rooms · Seminar rooms",
+  floor1Small:"1F · ARRIVAL", floor1Desc:"Grand lobby · Reception · Concierge · Lounge",
+  floorB1Small:"B1 · DINING", floorB1Desc:"Restaurant · Bar",
+  floorB23Small:"B2–B3 · LEISURE", floorB23Desc:"Indoor pool · Public spa",
+  floorB4Small:"B4–B20 · GUEST ROOMS", floorB4Desc:"Deluxe rooms · Premium rooms",
+  floorB21Small:"B21–B25 · PRIVATE", floorB21Desc:"Premium suites · VIP private residences"
+ };
+ const toggleButtons=document.querySelectorAll('[data-lang-toggle]');
+ let lang='ko';
+ window.VESPER_LANG='ko';
+ function setLang(next){
+  lang=next;
+  window.VESPER_LANG=lang;
+  document.documentElement.lang=lang;
+  document.body.classList.toggle('lang-en',lang==='en');
+  document.body.classList.toggle('lang-ko',lang==='ko');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+   const key=el.dataset.i18n;
+   if(lang==='en' && translations[key]) el.textContent=translations[key];
+   else if(lang==='ko') el.textContent=el.dataset.originalKo || (el.dataset.originalKo=el.textContent);
+  });
+  toggleButtons.forEach(btn=>{
+   btn.textContent=lang==='ko'?'EN':'KR';
+   btn.setAttribute('aria-label',lang==='ko'?'Switch to English':'Switch to Korean');
+  });
+  document.querySelectorAll('.room-link').forEach(btn=>{btn.textContent='View Details';});
+  if(window.updateRoomDetailLanguage) window.updateRoomDetailLanguage();
+  document.dispatchEvent(new CustomEvent('vesper-language-change'));
+  document.querySelectorAll('.room-detail-close,.image-modal-close').forEach(el=>el.textContent='CLOSE');
+ }
+ toggleButtons.forEach(btn=>btn.addEventListener('click',()=>setLang(lang==='ko'?'en':'ko')));
+ document.addEventListener('vesper-language-change',()=>{});
+ setLang('ko');
+})();
 
 (function(){
  const roomModal=document.getElementById('roomDetailModal');
@@ -159,7 +668,8 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
  const roomData={
    'Vesper Deluxe':{
      kicker:'01 · ROOM',
-     description:'A quiet private room designed for the hours after dark.',
+     descriptionKo:'깊은 밤의 고요함을 온전히 누릴 수 있도록 설계된 프라이빗 객실입니다. 절제된 분위기와 섬세한 디테일이 편안한 휴식을 완성합니다.',
+     descriptionEn:'A quiet private room designed for the hours after dark, where understated details create a calm and intimate retreat.',
      images:[
        ['./images/room1.jpg','01 · ROOM DETAIL'],
        ['./images/room2.jpg','02 · ROOM DETAIL'],
@@ -168,22 +678,39 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
    },
    'Midnight Suite':{
      kicker:'02 · SUITE',
-     description:'A spacious night retreat composed for slow hours, private dining and uninterrupted rest.',
+     descriptionKo:'느린 밤의 여유와 프라이빗 다이닝, 온전한 휴식을 위해 설계된 넉넉한 규모의 스위트룸입니다. 객실 안에는 세심하게 구현된 프라이빗 가든과 여유로운 크기의 전용 자쿠지가 마련되어 있어, 외부의 방해 없이 오롯이 자신만의 시간을 누리실 수 있습니다.',
+     descriptionEn:'An expansive suite conceived for unhurried nights, private dining and uninterrupted repose. A carefully realised private garden and a generously sized private jacuzzi create a secluded retreat, inviting you to savour time entirely your own.',
      images:[
        ['./images/suite1.jpg','01 · SUITE DETAIL'],
-       ['./images/suit2.jpg','02 · SUITE DETAIL'],
-       ['./images/suit3.jpg','03 · SUITE DETAIL']
+       ['./images/sweet_pool.jpg','02 · PRIVATE POOL'],
+       ['./images/suit2.jpg','03 · PRIVATE JACUZZI'],
+       ['./images/sweet_restroom.jpg','04 · BATHROOM'],
+       ['./images/sweet_office.jpg','05 · PRIVATE OFFICE'],
+       ['./images/suit3.jpg','06 · BEDROOM']
      ]
    }
  };
+ let roomGalleryIndex=0;
+ function initRoomGallery(total){
+   const track=document.getElementById('roomGalleryTrack'), dotsWrap=document.getElementById('roomGalleryDots'); if(!track||!dotsWrap)return;
+   roomGalleryIndex=0; dotsWrap.innerHTML='';
+   for(let i=0;i<total;i++){const b=document.createElement('button');b.type='button';b.className='room-gallery-dot'+(i===0?' active':'');b.setAttribute('aria-label','Show suite image '+(i+1));b.addEventListener('click',()=>goRoomSlide(i));dotsWrap.appendChild(b)}
+   document.getElementById('roomGalleryPrev').onclick=()=>goRoomSlide(roomGalleryIndex-1);document.getElementById('roomGalleryNext').onclick=()=>goRoomSlide(roomGalleryIndex+1);
+   let tx=0;track.addEventListener('touchstart',e=>{tx=e.changedTouches[0].screenX},{passive:true});track.addEventListener('touchend',e=>{let dx=e.changedTouches[0].screenX-tx;if(Math.abs(dx)>40)goRoomSlide(roomGalleryIndex+(dx<0?1:-1))},{passive:true});
+   goRoomSlide(0);
+ }
+ function goRoomSlide(n){const track=document.getElementById('roomGalleryTrack'), dots=document.querySelectorAll('.room-gallery-dot');if(!track||!dots.length)return;roomGalleryIndex=(n+dots.length)%dots.length;track.style.transform=`translateX(-${roomGalleryIndex*100}%)`;dots.forEach((d,i)=>d.classList.toggle('active',i===roomGalleryIndex));}
  function openRoom(name){
    const data=roomData[name];
    if(!data) return;
    roomTitle.textContent=name;
+   roomModal.classList.toggle('suite-view',name==='Midnight Suite');
+   roomModal.classList.toggle('deluxe-view',name==='Vesper Deluxe');
    roomHeading.textContent=name;
    roomKicker.textContent=data.kicker;
-   roomDescription.textContent=data.description;
-   roomGallery.innerHTML=data.images.map((item,i)=>`<figure class="room-detail-item"><img src="${item[0]}" alt="${name} detail ${i+1}" loading="eager"><figcaption>${item[1]}</figcaption></figure>`).join('');
+   roomDescription.textContent=window.VESPER_LANG==='en'?data.descriptionEn:data.descriptionKo;
+   roomGallery.innerHTML=`<div class="room-gallery-viewport"><div class="room-gallery-track" id="roomGalleryTrack">${data.images.map((item,i)=>`<figure class="room-detail-item"><img src="${item[0]}" alt="${name} detail ${i+1}" loading="eager"><figcaption>${item[1]}</figcaption></figure>`).join('')}</div></div><div class="room-gallery-controls"><button type="button" id="roomGalleryPrev" aria-label="Previous image">←</button><div class="room-gallery-dots" id="roomGalleryDots"></div><button type="button" id="roomGalleryNext" aria-label="Next image">→</button></div>`;
+   initRoomGallery(data.images.length);
    roomModal.classList.add('open');
    roomModal.setAttribute('aria-hidden','false');
    document.body.classList.add('modal-open');
@@ -194,6 +721,11 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
    roomModal.setAttribute('aria-hidden','true');
    document.body.classList.remove('modal-open');
  }
+ window.updateRoomDetailLanguage=function(){
+   if(!roomModal.classList.contains('open')) return;
+   const data=roomData[roomTitle.textContent];
+   if(data) roomDescription.textContent=window.VESPER_LANG==='en'?data.descriptionEn:data.descriptionKo;
+ };
  document.querySelectorAll('.room[data-room]').forEach(card=>{
    card.addEventListener('click',e=>{
      if(e.target.closest('a')) return;
@@ -213,12 +745,40 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
  const modal=document.getElementById('facilityModal');
  const modalImg=document.getElementById('facilityModalImage');
  const caption=document.getElementById('facilityModalCaption');
+ const detail=document.getElementById('facilityModalDetail');
  const facilities=document.querySelectorAll('.facility, .archive-item');
+ const facilityPrev=document.getElementById('facilityPrev'), facilityNext=document.getElementById('facilityNext'), facilityDots=document.getElementById('facilitySlideDots');
+ let facilityImages=[], facilityIndex=0;
+ const facilityImageSets={'The Lounge':['./images/The Lounge.jpg','./images/lounge_office.jpg'],'Vesper Spa':['./images/Vesper Spa.jpg','./images/spa_2.jpg'],'Outdoor Pool':['./images/outdoor_pool.jpg','./images/outdoor_pool2.jpg'],'VIP Restaurant':['./images/private_dining.jpg','./images/priveateRestorant_vip.jpg']};
+ function renderFacilitySlide(n){if(!facilityImages.length)return;facilityIndex=(n+facilityImages.length)%facilityImages.length;modalImg.src=facilityImages[facilityIndex];modalImg.alt=caption.textContent+' · '+(facilityIndex+1);facilityDots.innerHTML='';facilityImages.forEach((src,i)=>{const b=document.createElement('button');b.type='button';b.className='facility-slide-dot'+(i===facilityIndex?' active':'');b.setAttribute('aria-label','Show image '+(i+1));b.onclick=()=>renderFacilitySlide(i);facilityDots.appendChild(b)});}
+ const info={
+  'Vesper Restaurant':{floor:'B1 · DINING',hours:'24 HOURS · DINING 22:00–01:00',ko:'레스토랑은 24시간 운영됩니다. 투숙에 포함된 기본 식사 제공 시간은 22:00부터 01:00까지입니다.',en:'The restaurant is open 24 hours. The standard meal included with your stay is served from 22:00 to 01:00.'},
+  'Indoor Pool':{floor:'B2 · LEISURE',hours:'OPEN 24 HOURS',ko:'B2층에 위치한 실내 수영장으로, 24시간 이용하실 수 있습니다.',en:'Located on B2, the indoor pool is available 24 hours a day.'},
+  'The Lounge':{floor:'1F · ARRIVAL',hours:'18:00–06:00',ko:'1층에 위치한 나이트 라운지로, 저녁 6시부터 다음 날 오전 6시까지 운영됩니다.',en:'Located on 1F, the night lounge is open from 18:00 to 06:00.'},
+  'Vesper Spa':{floor:'3F · WELLNESS',hours:'20:00–06:00 · RESERVATION REQUIRED',ko:'3층 웰니스 공간에 위치한 프라이빗 스파로, 스위트룸 투숙객만 이용하실 수 있습니다. 20:00부터 다음 날 06:00까지 운영되며 사전 예약이 필수입니다.',en:'Located on 3F, this private spa is exclusively available to suite guests from 20:00 to 06:00. Advance reservation is required.'},
+  'Private Dining':{floor:'2F · DINING & SOCIAL',hours:'24 HOURS · RESERVATION REQUIRED',ko:'2층에 위치한 프라이빗 다이닝 공간으로, 24시간 이용 가능하며 사전 예약이 필수입니다.',en:'Located on 2F, private dining is available 24 hours a day by advance reservation only.'},
+  'Public Spa':{floor:'B3 · WELLNESS',hours:'20:00–06:00',ko:'B3층에 위치한 공용 스파로, 일반 투숙객이 이용하실 수 있습니다. 운영 시간은 20:00부터 다음 날 06:00까지입니다.',en:'Located on B3, the public spa is available to all hotel guests from 20:00 to 06:00.'},
+  'Reception':{floor:'1F · ARRIVAL',hours:'24 HOURS',ko:'1층 그랜드 로비에 위치한 리셉션으로, 체크인과 체크아웃 및 투숙 관련 안내를 24시간 제공합니다.',en:'Located in the 1F grand lobby, reception provides 24-hour assistance with arrivals, departures and guest enquiries.'},
+  'VIP Restaurant':{floor:'4F · VIP DINING',hours:'24 HOURS · RESERVATION REQUIRED',ko:'4층에 위치한 VIP 전용 다이닝 공간으로, 스위트룸 투숙객만 이용하실 수 있습니다. 사전 예약이 필요합니다.',en:'Located on 4F, this VIP dining room is exclusively available to suite guests by advance reservation.'},
+  'Outdoor Pool':{floor:'4F · PRIVATE WELLNESS',hours:'23:00–05:00 · SEASONAL HOURS',ko:'4층에 위치한 야외 수영장으로, 스위트룸 투숙객 전용입니다. 기본 운영 시간은 23:00부터 다음 날 05:00까지이며, 계절 및 기상 상황에 따라 변동될 수 있습니다.',en:'Located on 4F, the outdoor pool is exclusively available to suite guests from 23:00 to 05:00. Hours may vary by season and weather conditions.'}
+ };
  function openFacility(card){
    const img=card.querySelector('img');
-   modalImg.src=img.currentSrc || img.src;
-   modalImg.alt=img.alt || '';
-   caption.textContent=card.dataset.facility || card.dataset.archive || img.alt || '';
+   const name=card.dataset.facility || card.dataset.archive || img.alt || '';
+   caption.textContent=name;
+   const visitorFacilities = new Set(['Reception','Vesper Restaurant','Indoor Pool','Public Spa']);
+   facilityImages = visitorFacilities.has(name) ? [img.getAttribute('src') || img.src] : (facilityImageSets[name] || [img.getAttribute('src') || img.src]);
+   const figure = modal.querySelector('.image-modal-figure');
+   figure.classList.toggle('visitor-single-image', visitorFacilities.has(name));
+   facilityPrev.hidden = facilityImages.length < 2;
+   facilityNext.hidden = facilityImages.length < 2;
+   facilityIndex=0; renderFacilitySlide(0);
+   const d=info[name];
+   if(d){
+    const en=window.VESPER_LANG==='en';
+    detail.hidden=false;
+    detail.innerHTML=`<div><small>${en?'LOCATION':'위치 · 층수'}</small><strong>${d.floor}</strong></div><div><small>${en?'OPERATING HOURS':'운영시간'}</small><strong>${d.hours}</strong></div><p>${en?d.en:d.ko}</p>`;
+   }else{detail.hidden=true;detail.innerHTML='';}
    modal.classList.add('open');
    modal.setAttribute('aria-hidden','false');
    document.body.classList.add('modal-open');
@@ -232,11 +792,20 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
  facilities.forEach(card=>{
    card.addEventListener('click',()=>openFacility(card));
    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openFacility(card)}});
+   if(card.classList.contains('facility')){
+    const name=card.dataset.facility; const d=info[name];
+    if(d){
+     const panel=document.createElement('div');panel.className='facility-meta';
+     panel.innerHTML=`<small>FACILITY INFORMATION</small><strong>${d.floor}</strong><span>${d.hours}</span>`;
+     card.insertBefore(panel,card.querySelector('.facility-info'));
+    }
+   }
  });
+ document.addEventListener('vesper-language-change',()=>{if(modal.classList.contains('open')){const active=Array.from(facilities).find(c=>c.querySelector('img')?.src===modalImg.src);if(active)openFacility(active);}});
+ facilityPrev.addEventListener('click',()=>renderFacilitySlide(facilityIndex-1));facilityNext.addEventListener('click',()=>renderFacilitySlide(facilityIndex+1));
  modal.querySelectorAll('[data-modal-close]').forEach(el=>el.addEventListener('click',closeFacility));
  document.addEventListener('keydown',e=>{if(e.key==='Escape' && modal.classList.contains('open')) closeFacility()});
 })();
-
 
 (function(){
  const track=document.getElementById('amenitiesTrack'); if(!track)return;
@@ -247,6 +816,19 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
  const dots=Array.from(dotsWrap.children);
  function go(n){current=(n+slides.length)%slides.length;track.style.transform='translateX(-'+(current*100)+'%)';count.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');dots.forEach((d,i)=>{d.classList.toggle('active',i===current);d.setAttribute('aria-current',String(i===current))})}
  document.getElementById('amenitiesPrev').addEventListener('click',()=>go(current-1));document.getElementById('amenitiesNext').addEventListener('click',()=>go(current+1));
+ let touchX=0;track.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});track.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>45)go(current+(dx<0?1:-1))},{passive:true});
+})();
+
+
+(function(){
+ const track=document.getElementById('identityTrack'); if(!track)return;
+ const slides=Array.from(track.querySelectorAll('.amenities-slide'));
+ const count=document.getElementById('identityCount'); const dotsWrap=document.getElementById('identityDots');
+ let current=0;
+ slides.forEach((slide,i)=>{const b=document.createElement('button');b.type='button';b.className='amenities-dot'+(i===0?' active':'');b.setAttribute('aria-label','Show visual identity image '+(i+1));b.addEventListener('click',()=>go(i));dotsWrap.appendChild(b)});
+ const dots=Array.from(dotsWrap.children);
+ function go(n){current=(n+slides.length)%slides.length;track.style.transform='translateX(-'+(current*100)+'%)';count.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');dots.forEach((d,i)=>{d.classList.toggle('active',i===current);d.setAttribute('aria-current',String(i===current))})}
+ document.getElementById('identityPrev').addEventListener('click',()=>go(current-1));document.getElementById('identityNext').addEventListener('click',()=>go(current+1));
  let touchX=0;track.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});track.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>45)go(current+(dx<0?1:-1))},{passive:true});
 })();
 
@@ -265,6 +847,26 @@ section{padding:130px 9vw}.intro{background:var(--ivory);color:#241517;display:g
  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.08});
  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
+
+(function(){
+  // Return to the top after 60 seconds without interaction, but never interrupt an open modal/menu.
+  let idleTimer;
+  const idleDelay=60*1000;
+  function resetIdleTimer(){
+    window.clearTimeout(idleTimer);
+    idleTimer=window.setTimeout(()=>{
+      const modalOpen=document.querySelector('.room-detail-modal.open,.image-modal.open,.menu-panel.open');
+      if(window.scrollY>180 && !modalOpen){
+        window.scrollTo({top:0,behavior:'smooth'});
+      }
+    },idleDelay);
+  }
+  ['scroll','pointerdown','pointermove','keydown','touchstart','wheel'].forEach(eventName=>{
+    window.addEventListener(eventName,resetIdleTimer,{passive:true});
+  });
+  resetIdleTimer();
+})();
+
 </script>
 
 </body>
